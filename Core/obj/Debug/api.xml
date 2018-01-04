@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+<package name="org.jboss.aerogear.android.core">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildConfig" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="BuildConfig" static="false" type="org.jboss.aerogear.android.core.BuildConfig" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="APPLICATION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;org.jboss.aerogear.android.core&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="410" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;4.1.0-SNAPSHOT&quot;" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Callback" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="java.io.Serializable" name-generic-aware="java.io.Serializable">
+</implements>
+<method abstract="true" deprecated="not deprecated" final="false" name="onFailure" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Exception">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onSuccess" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Config" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="CFG">
+<genericConstraints>
+<genericConstraint type="org.jboss.aerogear.android.core.Config"/>
+</genericConstraints>
+</typeParameter>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="setName" native="false" return="CFG" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="ConfigurationProvider" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="CFG">
+<genericConstraints>
+<genericConstraint type="org.jboss.aerogear.android.core.Config&lt;CFG&gt;"/>
+</genericConstraints>
+</typeParameter>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="newConfiguration" native="false" return="CFG" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Provider" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="get" native="false" return="T" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object...">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ReadFilter" static="false" visibility="public">
+<implements name="java.io.Serializable" name-generic-aware="java.io.Serializable">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="ReadFilter" static="false" type="org.jboss.aerogear.android.core.ReadFilter" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLimit" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLinkUri" native="false" return="java.net.URI" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOffset" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getQuery" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getWhere" native="false" return="org.json.JSONObject" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLimit" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Integer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLinkUri" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.net.URI">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setOffset" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Integer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setWhere" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.json.JSONObject">
+</parameter>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="RecordId" static="false" visibility="public">
+<implements name="java.lang.annotation.Annotation" name-generic-aware="java.lang.annotation.Annotation">
+</implements>
+</interface>
+</package>
+<package name="org.jboss.aerogear.android.core.reflection">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.RuntimeException" extends-generic-aware="java.lang.RuntimeException" final="false" name="FieldNotFoundException" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="FieldNotFoundException" static="false" type="org.jboss.aerogear.android.core.reflection.FieldNotFoundException" visibility="public">
+<parameter name="p0" type="java.lang.Class">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Property" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Property" static="false" type="org.jboss.aerogear.android.core.reflection.Property" visibility="public">
+<parameter name="p0" type="java.lang.Class">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getFieldName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getType" native="false" return="java.lang.Class" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getValue" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setValue" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.RuntimeException" extends-generic-aware="java.lang.RuntimeException" final="false" name="PropertyNotFoundException" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="PropertyNotFoundException" static="false" type="org.jboss.aerogear.android.core.reflection.PropertyNotFoundException" visibility="public">
+<parameter name="p0" type="java.lang.Class">
+</parameter>
+<parameter name="p1" type="java.lang.Class">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.RuntimeException" extends-generic-aware="java.lang.RuntimeException" final="false" name="RecordIdNotFoundException" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="RecordIdNotFoundException" static="false" type="org.jboss.aerogear.android.core.reflection.RecordIdNotFoundException" visibility="public">
+<parameter name="p0" type="java.lang.Class">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Scan" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Scan" static="false" type="org.jboss.aerogear.android.core.reflection.Scan" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="findIdValueIn" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="recordIdFieldNameIn" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Class">
+</parameter>
+</method>
+</class>
+</package>
+</api>

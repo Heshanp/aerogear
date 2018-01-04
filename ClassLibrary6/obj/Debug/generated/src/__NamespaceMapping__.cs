@@ -1,0 +1,5 @@
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "org.jboss.aerogear.android.core", Managed="Org.Jboss.Aerogear.Android.Core")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "org.jboss.aerogear.android.core.reflection", Managed="Org.Jboss.Aerogear.Android.Core.Reflection")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "org.jboss.aerogear.android.unifiedpush", Managed="Org.Jboss.Aerogear.Android.Unifiedpush")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "org.jboss.aerogear.android.unifiedpush.fcm", Managed="Org.Jboss.Aerogear.Android.Unifiedpush.Fcm")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "org.jboss.aerogear.android.unifiedpush.metrics", Managed="Org.Jboss.Aerogear.Android.Unifiedpush.Metrics")]

@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+<package name="org.jboss.aerogear.android.pipe">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildConfig" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="BuildConfig" static="false" type="org.jboss.aerogear.android.pipe.BuildConfig" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="APPLICATION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;org.jboss.aerogear.android.pipe&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="410" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;4.1.0-SNAPSHOT&quot;" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="LoaderPipe" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="org.jboss.aerogear.android.pipe.Pipe" name-generic-aware="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</implements>
+<method abstract="true" deprecated="not deprecated" final="false" name="reset" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="setLoaderIds" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.util.List&lt;java.lang.Integer&gt;&gt;">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="CALLBACK" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;org.jboss.aerogear.android.impl.pipeline.LoaderPipe.CALLBACK&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FILTER" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;org.jboss.aerogear.android.impl.pipeline.LoaderPipe.FILTER&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ITEM" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;org.jboss.aerogear.android.impl.pipeline.LoaderPipe.ITEM&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="METHOD" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;org.jboss.aerogear.android.impl.pipeline.LoaderPipe.METHOD&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="REMOVE_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;org.jboss.aerogear.android.impl.pipeline.LoaderPipe.REMOVIE_ID&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SAVE_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;org.jboss.aerogear.android.impl.pipeline.LoaderPipe.SAVE_ID&quot;" visibility="public" volatile="false">
+</field>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MarshallingConfig" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MarshallingConfig" static="false" type="org.jboss.aerogear.android.pipe.MarshallingConfig" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDataRoot" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getEncoding" native="false" return="java.nio.charset.Charset" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setDataRoot" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setEncoding" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="OnPipeCreatedListener" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onPipeCreated" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.PipeConfiguration&lt;?&gt;">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.Pipe&lt;?&gt;">
+</parameter>
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Pipe" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="getHandler" native="false" return="org.jboss.aerogear.android.pipe.PipeHandler&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getKlass" native="false" return="java.lang.Class&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getRequestBuilder" native="false" return="org.jboss.aerogear.android.pipe.RequestBuilder&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getResponseParser" native="false" return="org.jboss.aerogear.android.pipe.ResponseParser&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getUrl" native="false" return="java.net.URL" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="read" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="read" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="read" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="save" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+</parameter>
+</method>
+</interface>
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PipeConfiguration" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="CONFIGURATION">
+<genericConstraints>
+<genericConstraint type="org.jboss.aerogear.android.pipe.PipeConfiguration&lt;CONFIGURATION&gt;"/>
+</genericConstraints>
+</typeParameter>
+</typeParameters>
+<implements name="org.jboss.aerogear.android.core.Config" name-generic-aware="org.jboss.aerogear.android.core.Config&lt;CONFIGURATION&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="PipeConfiguration" static="false" type="org.jboss.aerogear.android.pipe.PipeConfiguration" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="addOnPipeCreatedListener" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.OnPipeCreatedListener">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="buildPipeForClass" native="false" return="org.jboss.aerogear.android.pipe.Pipe&lt;DATA&gt;" static="false" synchronized="false" visibility="protected">
+<typeParameters>
+<typeParameter name="DATA"/>
+</typeParameters>
+<parameter name="p0" type="java.lang.Class&lt;DATA&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="true" name="forClass" native="false" return="org.jboss.aerogear.android.pipe.Pipe&lt;DATA&gt;" static="false" synchronized="false" visibility="public">
+<typeParameters>
+<typeParameter name="DATA"/>
+</typeParameters>
+<parameter name="p0" type="java.lang.Class&lt;DATA&gt;">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getModules" native="false" return="java.util.List&lt;org.jboss.aerogear.android.pipe.module.PipeModule&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOnPipeCreatedListeners" native="false" return="java.util.Collection&lt;org.jboss.aerogear.android.pipe.OnPipeCreatedListener&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="module" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.module.PipeModule">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="pageConfig" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.paging.PageConfig">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="requestBuilder" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.RequestBuilder">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="responseParser" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.ResponseParser">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setName" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setOnPipeCreatedListeners" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.Collection&lt;org.jboss.aerogear.android.pipe.OnPipeCreatedListener&gt;">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="timeout" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Integer">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="withUrl" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.net.URL">
+</parameter>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="PipeHandler" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="onRawRead" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onRawRead" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onRawReadWithFilter" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onRawSave" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="byte[]">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onRemove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PipeManager" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="config" native="false" return="CFG" static="true" synchronized="false" visibility="public">
+<typeParameters>
+<typeParameter name="CFG">
+<genericConstraints>
+<genericConstraint type="org.jboss.aerogear.android.pipe.PipeConfiguration&lt;CFG&gt;"/>
+</genericConstraints>
+</typeParameter>
+</typeParameters>
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Class&lt;CFG&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPipe" native="false" return="org.jboss.aerogear.android.pipe.Pipe" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPipe" native="false" return="org.jboss.aerogear.android.pipe.LoaderPipe" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.app.Activity">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPipe" native="false" return="org.jboss.aerogear.android.pipe.LoaderPipe" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.app.Fragment">
+</parameter>
+<parameter name="p2" type="android.content.Context">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPipe" native="false" return="org.jboss.aerogear.android.pipe.LoaderPipe" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.support.v4.app.Fragment">
+</parameter>
+<parameter name="p2" type="android.content.Context">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="registerConfigurationProvider" native="false" return="void" static="true" synchronized="false" visibility="public">
+<typeParameters>
+<typeParameter name="CFG">
+<genericConstraints>
+<genericConstraint type="org.jboss.aerogear.android.pipe.PipeConfiguration&lt;CFG&gt;"/>
+</genericConstraints>
+</typeParameter>
+</typeParameters>
+<parameter name="p0" type="java.lang.Class&lt;CFG&gt;">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.ConfigurationProvider&lt;CFG&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PipeManager.1" static="true" visibility="">
+<implements name="org.jboss.aerogear.android.pipe.OnPipeCreatedListener" name-generic-aware="org.jboss.aerogear.android.pipe.OnPipeCreatedListener">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="onPipeCreated" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.PipeConfiguration&lt;?&gt;">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.Pipe&lt;?&gt;">
+</parameter>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="RequestBuilder" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="getBody" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getContentType" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getMarshallingConfig" native="false" return="org.jboss.aerogear.android.pipe.MarshallingConfig" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="ResponseParser" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="getMarshallingConfig" native="false" return="org.jboss.aerogear.android.pipe.MarshallingConfig" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="handleResponse" native="false" return="java.util.List&lt;T&gt;" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.http.HeaderAndBody">
+</parameter>
+<parameter name="p1" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="org.jboss.aerogear.android.pipe.callback">
+<class abstract="true" deprecated="not deprecated" extends="org.jboss.aerogear.android.pipe.callback.AbstractCallback" extends-generic-aware="org.jboss.aerogear.android.pipe.callback.AbstractCallback&lt;T&gt;" final="false" name="AbstractActivityCallback" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<constructor deprecated="not deprecated" final="false" name="AbstractActivityCallback" static="false" type="org.jboss.aerogear.android.pipe.callback.AbstractActivityCallback" visibility="public">
+<parameter name="p0" type="java.lang.Object...">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getActivity" native="false" return="android.app.Activity" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setActivity" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.app.Activity">
+</parameter>
+</method>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AbstractCallback" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="org.jboss.aerogear.android.core.Callback" name-generic-aware="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="AbstractCallback" static="false" type="org.jboss.aerogear.android.pipe.callback.AbstractCallback" visibility="public">
+<parameter name="p0" type="java.lang.Object...">
+</parameter>
+</constructor>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="org.jboss.aerogear.android.pipe.callback.AbstractCallback" extends-generic-aware="org.jboss.aerogear.android.pipe.callback.AbstractCallback&lt;T&gt;" final="false" name="AbstractFragmentCallback" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<constructor deprecated="not deprecated" final="false" name="AbstractFragmentCallback" static="false" type="org.jboss.aerogear.android.pipe.callback.AbstractFragmentCallback" visibility="public">
+<parameter name="p0" type="java.lang.Object...">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getFragment" native="false" return="android.app.Fragment" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setFragment" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.app.Fragment">
+</parameter>
+</method>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="org.jboss.aerogear.android.pipe.callback.AbstractCallback" extends-generic-aware="org.jboss.aerogear.android.pipe.callback.AbstractCallback&lt;T&gt;" final="false" name="AbstractSupportFragmentCallback" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<constructor deprecated="not deprecated" final="false" name="AbstractSupportFragmentCallback" static="false" type="org.jboss.aerogear.android.pipe.callback.AbstractSupportFragmentCallback" visibility="public">
+<parameter name="p0" type="java.lang.Object...">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSupportFragment" native="false" return="android.support.v4.app.Fragment" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setSupportFragment" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.support.v4.app.Fragment">
+</parameter>
+</method>
+</class>
+</package>
+<package name="org.jboss.aerogear.android.pipe.http">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="HeaderAndBody" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="HeaderAndBody" static="false" type="org.jboss.aerogear.android.pipe.http.HeaderAndBody" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBody" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHeader" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setHeader" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.RuntimeException" extends-generic-aware="java.lang.RuntimeException" final="false" name="HttpException" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="HttpException" static="false" type="org.jboss.aerogear.android.pipe.http.HttpException" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="HttpException" static="false" type="org.jboss.aerogear.android.pipe.http.HttpException" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="HttpException" static="false" type="org.jboss.aerogear.android.pipe.http.HttpException" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="HttpException" static="false" type="org.jboss.aerogear.android.pipe.http.HttpException" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getData" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHeaders" native="false" return="java.util.Map&lt;java.lang.String, java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStatusCode" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="HttpProvider" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="delete" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<exception name="HttpException" type="org.jboss.aerogear.android.pipe.http.HttpException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="get" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<exception name="HttpException" type="org.jboss.aerogear.android.pipe.http.HttpException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getUrl" native="false" return="java.net.URL" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="post" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<exception name="HttpException" type="org.jboss.aerogear.android.pipe.http.HttpException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="post" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<exception name="HttpException" type="org.jboss.aerogear.android.pipe.http.HttpException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="put" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="byte[]">
+</parameter>
+<exception name="HttpException" type="org.jboss.aerogear.android.pipe.http.HttpException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="put" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<exception name="HttpException" type="org.jboss.aerogear.android.pipe.http.HttpException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="setDefaultHeader" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="HttpProviderFactory" static="false" visibility="public">
+<implements name="org.jboss.aerogear.android.core.Provider" name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;org.jboss.aerogear.android.pipe.http.HttpProvider&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="HttpProviderFactory" static="false" type="org.jboss.aerogear.android.pipe.http.HttpProviderFactory" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="org.jboss.aerogear.android.pipe.http.HttpProvider" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object...">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="HttpRestProvider" static="false" visibility="public">
+<implements name="org.jboss.aerogear.android.pipe.http.HttpProvider" name-generic-aware="org.jboss.aerogear.android.pipe.http.HttpProvider">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="HttpRestProvider" static="false" type="org.jboss.aerogear.android.pipe.http.HttpRestProvider" visibility="public">
+<parameter name="p0" type="java.net.URL">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="HttpRestProvider" static="false" type="org.jboss.aerogear.android.pipe.http.HttpRestProvider" visibility="public">
+<parameter name="p0" type="java.net.URL">
+</parameter>
+<parameter name="p1" type="java.lang.Integer">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="delete" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<exception name="RuntimeException" type="java.lang.RuntimeException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<exception name="HttpException" type="org.jboss.aerogear.android.pipe.http.HttpException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getUrl" native="false" return="java.net.URL" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="post" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<exception name="RuntimeException" type="java.lang.RuntimeException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="post" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<exception name="RuntimeException" type="java.lang.RuntimeException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="byte[]">
+</parameter>
+<exception name="RuntimeException" type="java.lang.RuntimeException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<exception name="RuntimeException" type="java.lang.RuntimeException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setDefaultHeader" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="HttpRestProvider.1" static="false" visibility="">
+<implements name="org.jboss.aerogear.android.core.Provider" name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;java.net.HttpURLConnection&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="java.net.HttpURLConnection" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object...">
+</parameter>
+</method>
+</class>
+</package>
+<package name="org.jboss.aerogear.android.pipe.loader">
+<class abstract="true" deprecated="not deprecated" extends="android.content.AsyncTaskLoader" extends-generic-aware="android.content.AsyncTaskLoader&lt;org.jboss.aerogear.android.pipe.http.HeaderAndBody&gt;" final="false" name="AbstractPipeLoader" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<constructor deprecated="not deprecated" final="false" name="AbstractPipeLoader" static="false" type="org.jboss.aerogear.android.pipe.loader.AbstractPipeLoader" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getCallback" native="false" return="org.jboss.aerogear.android.core.Callback&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getException" native="false" return="java.lang.Exception" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="hasException" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="false" name="exception" static="false" transient="false" type="java.lang.Exception" type-generic-aware="java.lang.Exception" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.jboss.aerogear.android.pipe.loader.ReadLoader" extends-generic-aware="org.jboss.aerogear.android.pipe.loader.ReadLoader&lt;T&gt;" final="false" name="IdReadLoader" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<constructor deprecated="not deprecated" final="false" name="IdReadLoader" static="false" type="org.jboss.aerogear.android.pipe.loader.IdReadLoader" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+<parameter name="p2" type="org.jboss.aerogear.android.pipe.PipeHandler&lt;T&gt;">
+</parameter>
+<parameter name="p3" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+<parameter name="p4" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LoaderAdapter" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="android.app.LoaderManager.LoaderCallbacks" name-generic-aware="android.app.LoaderManager.LoaderCallbacks&lt;org.jboss.aerogear.android.pipe.http.HeaderAndBody&gt;">
+</implements>
+<implements name="org.jboss.aerogear.android.pipe.LoaderPipe" name-generic-aware="org.jboss.aerogear.android.pipe.LoaderPipe&lt;T&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="LoaderAdapter" static="false" type="org.jboss.aerogear.android.pipe.loader.LoaderAdapter" visibility="public">
+<parameter name="p0" type="android.support.v4.app.Fragment">
+</parameter>
+<parameter name="p1" type="android.content.Context">
+</parameter>
+<parameter name="p2" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="LoaderAdapter" static="false" type="org.jboss.aerogear.android.pipe.loader.LoaderAdapter" visibility="public">
+<parameter name="p0" type="android.app.Fragment">
+</parameter>
+<parameter name="p1" type="android.content.Context">
+</parameter>
+<parameter name="p2" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="LoaderAdapter" static="false" type="org.jboss.aerogear.android.pipe.loader.LoaderAdapter" visibility="public">
+<parameter name="p0" type="android.app.Activity">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHandler" native="false" return="org.jboss.aerogear.android.pipe.PipeHandler&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getKlass" native="false" return="java.lang.Class&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getRequestBuilder" native="false" return="org.jboss.aerogear.android.pipe.RequestBuilder&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getResponseParser" native="false" return="org.jboss.aerogear.android.pipe.ResponseParser&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getUrl" native="false" return="java.net.URL" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onCreateLoader" native="false" return="android.content.Loader&lt;org.jboss.aerogear.android.pipe.http.HeaderAndBody&gt;" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="android.os.Bundle">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onLoadFinished" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Loader&lt;org.jboss.aerogear.android.pipe.http.HeaderAndBody&gt;">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.http.HeaderAndBody">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onLoaderReset" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Loader&lt;org.jboss.aerogear.android.pipe.http.HeaderAndBody&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="read" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="read" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="read" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="reset" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="save" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLoaderIds" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.util.List&lt;java.lang.Integer&gt;&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LoaderAdapter.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LoaderAdapter.CallbackHandler" static="true" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="LoaderAdapter.CallbackHandler" static="false" type="org.jboss.aerogear.android.pipe.loader.LoaderAdapter.CallbackHandler" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.loader.LoaderAdapter&lt;T&gt;">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.loader.AbstractPipeLoader">
+</parameter>
+<parameter name="p2" type="java.lang.Object">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.jboss.aerogear.android.pipe.loader.LoaderAdapter.Methods&gt;" final="true" name="LoaderAdapter.Methods" static="true" visibility="">
+<field deprecated="not deprecated" final="true" name="READ" static="true" transient="false" type="org.jboss.aerogear.android.pipe.loader.LoaderAdapter.Methods" type-generic-aware="org.jboss.aerogear.android.pipe.loader.LoaderAdapter.Methods" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="READ_ID" static="true" transient="false" type="org.jboss.aerogear.android.pipe.loader.LoaderAdapter.Methods" type-generic-aware="org.jboss.aerogear.android.pipe.loader.LoaderAdapter.Methods" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="REMOVE" static="true" transient="false" type="org.jboss.aerogear.android.pipe.loader.LoaderAdapter.Methods" type-generic-aware="org.jboss.aerogear.android.pipe.loader.LoaderAdapter.Methods" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SAVE" static="true" transient="false" type="org.jboss.aerogear.android.pipe.loader.LoaderAdapter.Methods" type-generic-aware="org.jboss.aerogear.android.pipe.loader.LoaderAdapter.Methods" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.jboss.aerogear.android.pipe.loader.AbstractPipeLoader" extends-generic-aware="org.jboss.aerogear.android.pipe.loader.AbstractPipeLoader&lt;java.util.List&lt;T&gt;&gt;" final="false" name="ReadLoader" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<constructor deprecated="not deprecated" final="false" name="ReadLoader" static="false" type="org.jboss.aerogear.android.pipe.loader.ReadLoader" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+<parameter name="p2" type="org.jboss.aerogear.android.pipe.PipeHandler&lt;T&gt;">
+</parameter>
+<parameter name="p3" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+<parameter name="p4" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="loadInBackground" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.jboss.aerogear.android.pipe.loader.AbstractPipeLoader" extends-generic-aware="org.jboss.aerogear.android.pipe.loader.AbstractPipeLoader&lt;T&gt;" final="false" name="RemoveLoader" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<constructor deprecated="not deprecated" final="false" name="RemoveLoader" static="false" type="org.jboss.aerogear.android.pipe.loader.RemoveLoader" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+</parameter>
+<parameter name="p2" type="org.jboss.aerogear.android.pipe.PipeHandler&lt;T&gt;">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="loadInBackground" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.jboss.aerogear.android.pipe.loader.AbstractPipeLoader" extends-generic-aware="org.jboss.aerogear.android.pipe.loader.AbstractPipeLoader&lt;T&gt;" final="false" name="SaveLoader" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<constructor deprecated="not deprecated" final="false" name="SaveLoader" static="false" type="org.jboss.aerogear.android.pipe.loader.SaveLoader" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+</parameter>
+<parameter name="p2" type="org.jboss.aerogear.android.pipe.PipeHandler&lt;T&gt;">
+</parameter>
+<parameter name="p3" type="byte[]">
+</parameter>
+<parameter name="p4" type="java.lang.String">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="loadInBackground" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+</package>
+<package name="org.jboss.aerogear.android.pipe.module">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AuthorizationFields" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="AuthorizationFields" static="false" type="org.jboss.aerogear.android.pipe.module.AuthorizationFields" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="addHeader" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="addQueryParameter" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHeaders" native="false" return="java.util.List&lt;android.util.Pair&lt;java.lang.String, java.lang.String&gt;&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getQueryParameters" native="false" return="java.util.List&lt;android.util.Pair&lt;java.lang.String, java.lang.String&gt;&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setHeaders" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.List&lt;android.util.Pair&lt;java.lang.String, java.lang.String&gt;&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setQueryParameters" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.List&lt;android.util.Pair&lt;java.lang.String, java.lang.String&gt;&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ModuleFields" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ModuleFields" static="false" type="org.jboss.aerogear.android.pipe.module.ModuleFields" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="addHeader" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="addQueryParameter" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHeaders" native="false" return="java.util.List&lt;android.util.Pair&lt;java.lang.String, java.lang.String&gt;&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getQueryParameters" native="false" return="java.util.List&lt;android.util.Pair&lt;java.lang.String, java.lang.String&gt;&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setHeaders" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.List&lt;android.util.Pair&lt;java.lang.String, java.lang.String&gt;&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setQueryParameters" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.List&lt;android.util.Pair&lt;java.lang.String, java.lang.String&gt;&gt;">
+</parameter>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="PipeModule" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="handleError" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.http.HttpException">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="loadModule" native="false" return="org.jboss.aerogear.android.pipe.module.ModuleFields" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.net.URI">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="byte[]">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="org.jboss.aerogear.android.pipe.paging">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DefaultParameterProvider" static="false" visibility="public">
+<implements name="org.jboss.aerogear.android.pipe.paging.ParameterProvider" name-generic-aware="org.jboss.aerogear.android.pipe.paging.ParameterProvider">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="DefaultParameterProvider" static="false" type="org.jboss.aerogear.android.pipe.paging.DefaultParameterProvider" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getParameters" native="false" return="java.net.URI" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="MetadataLocation" static="false" visibility="public"/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PageConfig" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="PageConfig" static="false" type="org.jboss.aerogear.android.pipe.paging.PageConfig" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLimitValue" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMetadataLocation" native="false" return="org.jboss.aerogear.android.pipe.paging.MetadataLocation" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getNextIdentifier" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOffsetValue" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPageParameterExtractor" native="false" return="org.jboss.aerogear.android.pipe.paging.PageParameterExtractor" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getParameterProvider" native="false" return="org.jboss.aerogear.android.pipe.paging.ParameterProvider" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPreviousIdentifier" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLimitValue" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Integer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setMetadataLocation" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.paging.MetadataLocation">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setNextIdentifier" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setOffsetValue" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPageParameterExtractor" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.paging.PageParameterExtractor">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setParameterProvider" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.paging.ParameterProvider">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPreviousIdentifier" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.jboss.aerogear.android.pipe.paging.PageConfig.MetadataLocations&gt;" final="true" name="PageConfig.MetadataLocations" static="true" visibility="public">
+<implements name="org.jboss.aerogear.android.pipe.paging.MetadataLocation" name-generic-aware="org.jboss.aerogear.android.pipe.paging.MetadataLocation">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.jboss.aerogear.android.pipe.paging.PageConfig.MetadataLocations" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.jboss.aerogear.android.pipe.paging.PageConfig.MetadataLocations[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="BODY" static="true" transient="false" type="org.jboss.aerogear.android.pipe.paging.PageConfig.MetadataLocations" type-generic-aware="org.jboss.aerogear.android.pipe.paging.PageConfig.MetadataLocations" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HEADERS" static="true" transient="false" type="org.jboss.aerogear.android.pipe.paging.PageConfig.MetadataLocations" type-generic-aware="org.jboss.aerogear.android.pipe.paging.PageConfig.MetadataLocations" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="WEB_LINKING" static="true" transient="false" type="org.jboss.aerogear.android.pipe.paging.PageConfig.MetadataLocations" type-generic-aware="org.jboss.aerogear.android.pipe.paging.PageConfig.MetadataLocations" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="PageParameterExtractor" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T">
+<genericConstraints>
+<genericConstraint type="org.jboss.aerogear.android.pipe.paging.PageConfig"/>
+</genericConstraints>
+</typeParameter>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="getNextFilter" native="false" return="org.jboss.aerogear.android.core.ReadFilter" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.http.HeaderAndBody">
+</parameter>
+<parameter name="p1" type="T">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getPreviousFilter" native="false" return="org.jboss.aerogear.android.core.ReadFilter" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.http.HeaderAndBody">
+</parameter>
+<parameter name="p1" type="T">
+</parameter>
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="PagedList" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="java.util.List" name-generic-aware="java.util.List&lt;T&gt;">
+</implements>
+<method abstract="true" deprecated="not deprecated" final="false" name="next" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="previous" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="ParameterProvider" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="getParameters" native="false" return="java.net.URI" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="URIBodyPageParser" static="false" visibility="public">
+<implements name="org.jboss.aerogear.android.pipe.paging.PageParameterExtractor" name-generic-aware="org.jboss.aerogear.android.pipe.paging.PageParameterExtractor&lt;org.jboss.aerogear.android.pipe.paging.PageConfig&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="URIBodyPageParser" static="false" type="org.jboss.aerogear.android.pipe.paging.URIBodyPageParser" visibility="public">
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="URIBodyPageParser" static="false" type="org.jboss.aerogear.android.pipe.paging.URIBodyPageParser" visibility="public">
+<parameter name="p0" type="java.net.URL">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="URIBodyPageParser" static="false" type="org.jboss.aerogear.android.pipe.paging.URIBodyPageParser" visibility="public">
+<parameter name="p0" type="java.net.URI">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getNextFilter" native="false" return="org.jboss.aerogear.android.core.ReadFilter" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.http.HeaderAndBody">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.paging.PageConfig">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPreviousFilter" native="false" return="org.jboss.aerogear.android.core.ReadFilter" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.http.HeaderAndBody">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.paging.PageConfig">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="URIPageHeaderParser" static="false" visibility="public">
+<implements name="org.jboss.aerogear.android.pipe.paging.PageParameterExtractor" name-generic-aware="org.jboss.aerogear.android.pipe.paging.PageParameterExtractor">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="URIPageHeaderParser" static="false" type="org.jboss.aerogear.android.pipe.paging.URIPageHeaderParser" visibility="public">
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="URIPageHeaderParser" static="false" type="org.jboss.aerogear.android.pipe.paging.URIPageHeaderParser" visibility="public">
+<parameter name="p0" type="java.net.URL">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="URIPageHeaderParser" static="false" type="org.jboss.aerogear.android.pipe.paging.URIPageHeaderParser" visibility="public">
+<parameter name="p0" type="java.net.URI">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getNextFilter" native="false" return="org.jboss.aerogear.android.core.ReadFilter" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.http.HeaderAndBody">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.paging.PageConfig">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPreviousFilter" native="false" return="org.jboss.aerogear.android.core.ReadFilter" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.http.HeaderAndBody">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.paging.PageConfig">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="WebLink" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="WebLink" static="false" type="org.jboss.aerogear.android.pipe.paging.WebLink" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getParameters" native="false" return="java.util.Map&lt;java.lang.String, java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getUri" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.util.ArrayList" extends-generic-aware="java.util.ArrayList&lt;T&gt;" final="false" name="WrappingPagedList" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="org.jboss.aerogear.android.pipe.paging.PagedList" name-generic-aware="org.jboss.aerogear.android.pipe.paging.PagedList&lt;T&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="WrappingPagedList" static="false" type="org.jboss.aerogear.android.pipe.paging.WrappingPagedList" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+<parameter name="p1" type="java.util.List&lt;T&gt;">
+</parameter>
+<parameter name="p2" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+<parameter name="p3" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getNextFilter" native="false" return="org.jboss.aerogear.android.core.ReadFilter" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPreviousFilter" native="false" return="org.jboss.aerogear.android.core.ReadFilter" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="next" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="previous" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+</method>
+</class>
+</package>
+<package name="org.jboss.aerogear.android.pipe.rest">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="RestAdapter" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="org.jboss.aerogear.android.pipe.Pipe" name-generic-aware="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="RestAdapter" static="false" type="org.jboss.aerogear.android.pipe.rest.RestAdapter" visibility="public">
+<parameter name="p0" type="java.lang.Class&lt;T&gt;">
+</parameter>
+<parameter name="p1" type="java.net.URL">
+</parameter>
+<parameter name="p2" type="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="RestAdapter" static="false" type="org.jboss.aerogear.android.pipe.rest.RestAdapter" visibility="public">
+<parameter name="p0" type="java.lang.Class&lt;T&gt;">
+</parameter>
+<parameter name="p1" type="java.net.URL">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHandler" native="false" return="org.jboss.aerogear.android.pipe.PipeHandler&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getKlass" native="false" return="java.lang.Class&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getRequestBuilder" native="false" return="org.jboss.aerogear.android.pipe.RequestBuilder&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getResponseParser" native="false" return="org.jboss.aerogear.android.pipe.ResponseParser&lt;T&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getUrl" native="false" return="java.net.URL" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="read" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="read" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="read" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;java.util.List&lt;T&gt;&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="save" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="THREAD_POOL_EXECUTOR" static="true" transient="false" type="java.util.concurrent.Executor" type-generic-aware="java.util.concurrent.Executor" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RestAdapter.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RestAdapter.2" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RestAdapter.3" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RestAdapter.4" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RestAdapter.5" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RestRunner" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="org.jboss.aerogear.android.pipe.PipeHandler" name-generic-aware="org.jboss.aerogear.android.pipe.PipeHandler&lt;T&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="RestRunner" static="false" type="org.jboss.aerogear.android.pipe.rest.RestRunner" visibility="public">
+<parameter name="p0" type="java.lang.Class&lt;T&gt;">
+</parameter>
+<parameter name="p1" type="java.net.URL">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getRequestBuilder" native="false" return="org.jboss.aerogear.android.pipe.RequestBuilder&lt;T&gt;" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onRawRead" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onRawRead" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onRawReadWithFilter" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.core.ReadFilter">
+</parameter>
+<parameter name="p1" type="org.jboss.aerogear.android.pipe.Pipe&lt;T&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onRawSave" native="false" return="org.jboss.aerogear.android.pipe.http.HeaderAndBody" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onRemove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.jboss.aerogear.android.pipe.PipeConfiguration" extends-generic-aware="org.jboss.aerogear.android.pipe.PipeConfiguration&lt;org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration&gt;" final="false" name="RestfulPipeConfiguration" static="false" visibility="public">
+<implements name="org.jboss.aerogear.android.core.Config" name-generic-aware="org.jboss.aerogear.android.core.Config&lt;org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="RestfulPipeConfiguration" static="false" type="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="buildPipeForClass" native="false" return="org.jboss.aerogear.android.pipe.Pipe&lt;DATA&gt;" static="false" synchronized="false" visibility="protected">
+<typeParameters>
+<typeParameter name="DATA"/>
+</typeParameters>
+<parameter name="p0" type="java.lang.Class&lt;DATA&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getModules" native="false" return="java.util.List&lt;org.jboss.aerogear.android.pipe.module.PipeModule&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPageConfig" native="false" return="org.jboss.aerogear.android.pipe.paging.PageConfig" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPipeHandler" native="false" return="org.jboss.aerogear.android.pipe.PipeHandler" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getRequestBuilder" native="false" return="org.jboss.aerogear.android.pipe.RequestBuilder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getResponseParser" native="false" return="org.jboss.aerogear.android.pipe.ResponseParser" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTimeout" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getUrl" native="false" return="java.net.URL" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="module" native="false" return="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.module.PipeModule">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pageConfig" native="false" return="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.paging.PageConfig">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pipeHandler" native="false" return="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.PipeHandler">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="requestBuilder" native="false" return="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.RequestBuilder">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="responseParser" native="false" return="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.ResponseParser">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="timeout" native="false" return="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Integer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="withUrl" native="false" return="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.net.URL">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RestfulPipeConfigurationProvider" static="false" visibility="public">
+<implements name="org.jboss.aerogear.android.core.ConfigurationProvider" name-generic-aware="org.jboss.aerogear.android.core.ConfigurationProvider&lt;org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="RestfulPipeConfigurationProvider" static="false" type="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfigurationProvider" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="newConfiguration" native="false" return="org.jboss.aerogear.android.pipe.rest.RestfulPipeConfiguration" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+</package>
+<package name="org.jboss.aerogear.android.pipe.rest.gson">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="GsonRequestBuilder" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="org.jboss.aerogear.android.pipe.RequestBuilder" name-generic-aware="org.jboss.aerogear.android.pipe.RequestBuilder&lt;T&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="GsonRequestBuilder" static="false" type="org.jboss.aerogear.android.pipe.rest.gson.GsonRequestBuilder" visibility="public">
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="GsonRequestBuilder" static="false" type="org.jboss.aerogear.android.pipe.rest.gson.GsonRequestBuilder" visibility="public">
+<parameter name="p0" type="com.google.gson.Gson">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBody" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getContentType" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMarshallingConfig" native="false" return="org.jboss.aerogear.android.pipe.MarshallingConfig" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setMarshallingConfig" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.MarshallingConfig">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="CONTENT_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;application/json&quot;" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="GsonResponseParser" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="org.jboss.aerogear.android.pipe.ResponseParser" name-generic-aware="org.jboss.aerogear.android.pipe.ResponseParser&lt;T&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="GsonResponseParser" static="false" type="org.jboss.aerogear.android.pipe.rest.gson.GsonResponseParser" visibility="public">
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="GsonResponseParser" static="false" type="org.jboss.aerogear.android.pipe.rest.gson.GsonResponseParser" visibility="public">
+<parameter name="p0" type="com.google.gson.Gson">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMarshallingConfig" native="false" return="org.jboss.aerogear.android.pipe.MarshallingConfig" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="handleResponse" native="false" return="java.util.List&lt;T&gt;" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.http.HeaderAndBody">
+</parameter>
+<parameter name="p1" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setMarshallingConfig" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.MarshallingConfig">
+</parameter>
+</method>
+</class>
+</package>
+<package name="org.jboss.aerogear.android.pipe.rest.multipart">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MultipartRequestBuilder" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="org.jboss.aerogear.android.pipe.RequestBuilder" name-generic-aware="org.jboss.aerogear.android.pipe.RequestBuilder&lt;T&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="MultipartRequestBuilder" static="false" type="org.jboss.aerogear.android.pipe.rest.multipart.MultipartRequestBuilder" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBody" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getContentType" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMarshallingConfig" native="false" return="org.jboss.aerogear.android.pipe.MarshallingConfig" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setMarshallingConfig" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.jboss.aerogear.android.pipe.MarshallingConfig">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="TypeAndStream" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="TypeAndStream" static="false" type="org.jboss.aerogear.android.pipe.rest.multipart.TypeAndStream" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.io.InputStream">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getFileName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getInputStream" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMimeType" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+</package>
+<package name="org.jboss.aerogear.android.pipe.util">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ClassUtils" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ClassUtils" static="false" type="org.jboss.aerogear.android.pipe.util.ClassUtils" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="asArrayClass" native="false" return="java.lang.Class&lt;T[]&gt;" static="true" synchronized="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<parameter name="p0" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" final="false" name="ParseException" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ParseException" static="false" type="org.jboss.aerogear.android.pipe.util.ParseException" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="UrlUtils" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="appendQueryToBaseURL" native="false" return="java.net.URL" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.net.URL">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="appendToBaseURL" native="false" return="java.net.URL" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.net.URL">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="WebLinkParser" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="WebLinkParser" static="false" type="org.jboss.aerogear.android.pipe.util.WebLinkParser" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="parse" native="false" return="java.util.List&lt;org.jboss.aerogear.android.pipe.paging.WebLink&gt;" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<exception name="ParseException" type="org.jboss.aerogear.android.pipe.util.ParseException">
+</exception>
+</method>
+</class>
+</package>
+</api>

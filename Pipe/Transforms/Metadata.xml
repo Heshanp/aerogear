@@ -1,0 +1,259 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+  <!--<add-node path="/api/package[@name='org.jboss.aerogear.android.pipe.http']">
+    <class abstract="false" deprecated="not deprecated" final="false" name="HttpProviderFactory" static="true" visibility="public" extends="java.lang.Object"/>
+  </add-node>
+
+  <add-node path="/api/package[@name='org.jboss.aerogear.android.pipe.loader']">
+    <class abstract="false" deprecated="not deprecated" final="false" name="ReadLoader" static="true" visibility="public" extends="java.lang.Object"/>
+    <class abstract="false" deprecated="not deprecated" final="false" name="RemoveLoader" static="true" visibility="public" extends="java.lang.Object"/>
+    <class abstract="false" deprecated="not deprecated" final="false" name="LoaderAdapter" static="true" visibility="public" extends="java.lang.Object"/>    
+    <class abstract="false" deprecated="not deprecated" final="false" name="SaveLoader" static="true" visibility="public" extends="java.lang.Object"/>    
+  </add-node>-->
+
+
+  <!--<add-node path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']">
+    <class abstract="false" deprecated="not deprecated" final="false" name="RestfulPipeConfiguration" static="true" visibility="public" extends="java.lang.Object"/>   
+    <class abstract="false" deprecated="not deprecated" final="false" name="RestfulPipeConfigurationProvider" static="true" visibility="public" extends="java.lang.Object"/>   
+  </add-node>-->
+
+  <!--<attr path="/api/package[@name='org.jboss.aerogear.android.pipe']
+        /class[@name='PipeConfiguration']
+        /method[@name='withUrl' and count(parameter)=1 and parameter[1][@type='java.net.URL']]/parameter[1]"
+        name="managedType">Java.Lang.Object</attr>-->
+
+  <!--<attr path="/api/package[@name='org.jboss.aerogear.android.pipe']
+        /class[@name='PipeConfiguration']
+        /method[@name='withUrl']" name="return">Java.Lang.Object</attr>-->
+
+  <!--<remove-node path="/api/package[@name='org.jboss.aerogear.android.pipe']/class[@name='PipeConfiguration']/method[@name='withUrl' and count(parameter)=1 and parameter[1][@type='java.net.URL']]" />
+  <remove-node path="/api/package[@name='org.jboss.aerogear.android.pipe']/class[@name='PipeConfiguration']/method[@name='timeout' and count(parameter)=1 and parameter[1][@type='java.lang.Integer']]" />
+  <remove-node path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']/class[@name='RestfulPipeConfiguration']/method[@name='responseParser' and count(parameter)=1 and parameter[1][@type='org.jboss.aerogear.android.pipe.ResponseParser']]" />
+  <remove-node path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']/class[@name='RestfulPipeConfiguration']/method[@name='requestBuilder' and count(parameter)=1 and parameter[1][@type='org.jboss.aerogear.android.pipe.RequestBuilder']]" />
+  <remove-node path="/api/package[@name='org.jboss.aerogear.android.pipe']/class[@name='PipeConfiguration']/method[@name='requestBuilder' and count(parameter)=1 and parameter[1][@type='org.jboss.aerogear.android.pipe.RequestBuilder']]" />
+  <remove-node path="/api/package[@name='org.jboss.aerogear.android.pipe']/class[@name='PipeConfiguration']/method[@name='responseParser' and count(parameter)=1 and parameter[1][@type='org.jboss.aerogear.android.pipe.ResponseParser']]" />
+  <remove-node path="/api/package[@name='org.jboss.aerogear.android.pipe']/class[@name='PipeConfiguration']/method[@name='pageConfig' and count(parameter)=1 and parameter[1][@type='org.jboss.aerogear.android.pipe.paging.PageConfig']]" />
+  <remove-node path="/api/package[@name='org.jboss.aerogear.android.pipe']/class[@name='PipeConfiguration']/method[@name='module' and count(parameter)=1 and parameter[1][@type='org.jboss.aerogear.android.pipe.module.PipeModule']]" />-->
+
+  
+  
+  
+   <!--<attr path="/api/package[@name='org.jboss.aerogear.android.pipe.loader']
+         /class[@name='LoaderAdapter']
+         /method[@name='onLoadFinished' and 
+         count(parameter)=2 and 
+         parameter[1][@type='android.content.Loader&lt;org.jboss.aerogear.android.pipe.http.HeaderAndBody&gt;'] and 
+         parameter[2][@type='org.jboss.aerogear.android.pipe.http.HeaderAndBody']]"
+        name="managedType">Java.Lang.Object</attr>-->
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe.loader']
+        /class[@name='LoaderAdapter']
+        /method[@name='onLoadFinished']
+        /parameter[@name='p1']" name="type">Java.Lang.Object</attr>
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe.loader']
+        /class[@name='ReadLoader']
+        /method[@name='loadInBackground' and 
+        count(parameter)=0]" name="return">Java.Lang.Object</attr>
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe.loader']
+        /class[@name='RemoveLoader']
+        /method[@name='loadInBackground' and 
+        count(parameter)=0]" name="return">Java.Lang.Object</attr>
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe.loader']
+        /class[@name='SaveLoader']
+        /method[@name='loadInBackground' and 
+        count(parameter)=0]" name="return">Java.Lang.Object</attr>
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']
+        /class[@name='RestfulPipeConfiguration']
+        /method[@name='module' and 
+        count(parameter)=1 and 
+        parameter[1][@type='org.jboss.aerogear.android.pipe.module.PipeModule']]"
+        name="return">Java.Lang.Object</attr>
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']
+        /class[@name='RestfulPipeConfiguration']
+        /method[@name='withUrl' and 
+        count(parameter)=1 and 
+        parameter[1][@type='java.net.URL']]"
+        name="return">org.jboss.aerogear.android.pipe.PipeConfiguration</attr>
+
+  <attr   path="/api/package[@name='org.jboss.aerogear.android.pipe']
+          /class[@name='PipeConfiguration']
+          /method[@name='withUrl' and count(parameter)=1 and 
+          parameter[1][@type='java.net.URL']]"
+          name="return">org.jboss.aerogear.android.pipe.PipeConfiguration</attr>
+
+  <attr   path="/api/package[@name='org.jboss.aerogear.android.pipe']
+          /class[@name='PipeManager']
+          /method[@name='config' and 
+          count(parameter)=2 and parameter[1][@type='java.lang.String'] and 
+          parameter[2][@type='java.lang.Class&lt;CFG&gt;']]"
+          name="return">org.jboss.aerogear.android.pipe.PipeConfiguration</attr>
+
+  <attr   path="/api/package[@name='org.jboss.aerogear.android.pipe']
+          /class[@name='PipeManager']
+          /method[@name='config' and 
+          count(parameter)=2 and 
+          parameter[1][@type='java.lang.String'] and 
+          parameter[2][@type='java.lang.Class&lt;CFG&gt;']]"
+          name="return">org.jboss.aerogear.android.pipe.PipeConfiguration</attr>
+
+
+  <attr  path="/api/package[@name='org.jboss.aerogear.android.pipe']
+         /class[@name='PipeConfiguration']
+         /method[@name='module' and count(parameter)=1 and 
+         parameter[1][@type='org.jboss.aerogear.android.pipe.module.PipeModule']]"
+
+          name="return">org.jboss.aerogear.android.pipe.PipeConfiguration</attr>
+
+  <attr   path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']
+          /class[@name='RestfulPipeConfiguration']
+          /method[@name='module' and count(parameter)=1 and 
+          parameter[1][@type='org.jboss.aerogear.android.pipe.module.PipeModule']]"
+          name="return">org.jboss.aerogear.android.pipe.PipeConfiguration</attr>
+
+  <!--<attr path="/api/package[@name='org.jboss.aerogear.android.pipe']/class[@name='PipeConfiguration']"
+        name="extends">org.jboss.aerogear.android.pipe.PipeConfiguration</attr>-->
+  
+  <!--<attr path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']
+        /class[@name='RestfulPipeConfiguration']
+        /method[@name='timeout' and 
+        count(parameter)=1 and parameter[1][@type='java.lang.Integer']]"
+        name="return">Java.Lang.Object</attr>
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']
+        /class[@name='RestfulPipeConfiguration']
+        /method[@name='pageConfig' and 
+        count(parameter)=1 and 
+        parameter[1][@type='org.jboss.aerogear.android.pipe.paging.PageConfig']]"
+        name="return">Java.Lang.Object</attr>-->
+
+  <!--<attr path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']
+        /class[@name='RestfulPipeConfiguration']
+        /method[@name='pageConfig' and 
+        count(parameter)=1 and 
+        parameter[1][@type='org.jboss.aerogear.android.pipe.paging.PageConfig']]"
+        name="return">Java.Lang.Object</attr>-->
+
+  <!--<attr path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']
+        /class[@name='RestfulPipeConfiguration']
+        /method[@name='requestBuilder' and 
+        count(parameter)=1 and 
+        parameter[1][@type='org.jboss.aerogear.android.pipe.RequestBuilder']]"
+        name="return">Java.Lang.Object</attr>-->
+
+  <!--<attr path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']
+        /class[@name='RestfulPipeConfiguration']
+        /method[@name='responseParser' and 
+        count(parameter)=1 and 
+        parameter[1][@type='org.jboss.aerogear.android.pipe.ResponseParser']]"
+        name="return">Java.Lang.Object</attr>-->
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']
+        /class[@name='RestfulPipeConfiguration']
+        /method[@name='timeout' and 
+        count(parameter)=1 and parameter[1][@type='java.lang.Integer']]"
+        name="return">Java.Lang.Object</attr>
+  
+  
+  <!--<attr path="/api/package[@name='org.jboss.aerogear.android.pipe.rest']
+        /class[@name='RestfulPipeConfiguration']
+        /method[@name='timeout' and 
+        count(parameter)=1 and parameter[1][@type='java.lang.Integer']]"
+        name="final">true</attr>-->
+
+  <!--<attr  path="/api/package[@name='org.jboss.aerogear.android.pipe']
+         /class[@name='PipeConfiguration']
+         /method[@name='timeout' and 
+         count(parameter)=1 and 
+         parameter[1][@type='java.lang.Integer']]"
+         name="managedName">InvokeTimeout</attr>-->
+  
+  <!--<attr  path="/api/package[@name='org.jboss.aerogear.android.pipe']
+         /class[@name='PipeConfiguration']
+         /method[@name='pageConfig' and 
+         count(parameter)=1 and 
+         parameter[1][@type='org.jboss.aerogear.android.pipe.paging.PageConfig']]"
+         name="managedName">InvokePageConfig</attr>-->
+
+  <!--<attr  path="/api/package[@name='org.jboss.aerogear.android.pipe']
+         /class[@name='PipeConfiguration']
+         /method[@name='responseParser' and 
+         count(parameter)=1 and 
+         parameter[1][@type='org.jboss.aerogear.android.pipe.ResponseParser']]"
+         name="managedName">InvokeResponseParser</attr>-->
+
+  <!--<attr  path="/api/package[@name='org.jboss.aerogear.android.pipe']
+         /class[@name='PipeConfiguration']
+         /method[@name='requestBuilder' and 
+         count(parameter)=1 and 
+         parameter[1][@type='org.jboss.aerogear.android.pipe.RequestBuilder']]"
+         name="managedName">InvokeRequestBuilder</attr>-->
+
+
+  <remove-node path="/api/package[@name='org.jboss.aerogear.android.pipe']
+         /class[@name='PipeConfiguration']
+         /method[@name='requestBuilder' and 
+         count(parameter)=1 and 
+         parameter[1][@type='org.jboss.aerogear.android.pipe.RequestBuilder']]"/>
+
+  <remove-node  path="/api/package[@name='org.jboss.aerogear.android.pipe']
+         /class[@name='PipeConfiguration']
+         /method[@name='responseParser' and 
+         count(parameter)=1 and 
+         parameter[1][@type='org.jboss.aerogear.android.pipe.ResponseParser']]"/>
+
+  <remove-node   path="/api/package[@name='org.jboss.aerogear.android.pipe']
+         /class[@name='PipeConfiguration']
+         /method[@name='timeout' and 
+         count(parameter)=1 and 
+         parameter[1][@type='java.lang.Integer']]"/>
+
+  <remove-node   path="/api/package[@name='org.jboss.aerogear.android.pipe']
+         /class[@name='PipeConfiguration']
+         /method[@name='pageConfig' and 
+         count(parameter)=1 and 
+         parameter[1][@type='org.jboss.aerogear.android.pipe.paging.PageConfig']]"/>
+  
+  <!--
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe']
+        /class[@name='PipeConfiguration']
+        /method[@name='responseParser' and count(parameter)=1 and parameter[1][@type='org.jboss.aerogear.android.pipe.ResponseParser']]/parameter[1]"
+        name="managedType">Java.Lang.Object</attr>
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe']
+        /class[@name='PipeConfiguration']
+        /method[@name='requestBuilder' and count(parameter)=1 and parameter[1][@type='org.jboss.aerogear.android.pipe.RequestBuilder']]/parameter[1]"
+        name="managedType">Java.Lang.Object</attr>
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe']
+        /class[@name='PipeConfiguration']
+        /method[@name='pageConfig' and count(parameter)=1 and parameter[1][@type='org.jboss.aerogear.android.pipe.paging.PageConfig']]/parameter[1]"
+        name="managedType">Java.Lang.Object</attr>
+
+  <attr path="/api/package[@name='org.jboss.aerogear.android.pipe']
+        /class[@name='PipeConfiguration']
+        /method[@name='module' and count(parameter)=1 and parameter[1][@type='org.jboss.aerogear.android.pipe.module.PipeModule']]/parameter[1]"
+        name="managedType">Java.Lang.Object</attr>-->
+  
+  
+  
+  
+  <!--<add-node path="/api/package[@name='org.jboss.aerogear.android.pipe.paging']">
+    <class abstract="false" 
+           deprecated="not deprecated" 
+           final="false" 
+           name="URIPageHeaderParser" 
+           static="true" visibility="public" extends="java.lang.Object"/>
+  </add-node>-->
+</metadata>

@@ -1,0 +1,3759 @@
+<api
+  api-source="class-parse">
+  <package
+    name="org.jboss.aerogear.android.core"
+    jni-name="org/jboss/aerogear/android/core">
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="BuildConfig"
+      jni-signature="Lorg/jboss/aerogear/android/core/BuildConfig;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="BuildConfig"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="APPLICATION_ID"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;org.jboss.aerogear.android.core&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="BUILD_TYPE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;release&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="DEBUG"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="boolean"
+        type-generic-aware="boolean"
+        jni-signature="Z"
+        value="false"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="FLAVOR"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="VERSION_CODE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="int"
+        type-generic-aware="int"
+        jni-signature="I"
+        value="410"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="VERSION_NAME"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;4.1.0-SNAPSHOT&quot;"
+        visibility="public"
+        volatile="false" />
+    </class>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="Callback"
+      jni-signature="Lorg/jboss/aerogear/android/core/Callback;"
+      static="false"
+      visibility="public">
+      <typeParameters>
+        <typeParameter
+          name="T"
+          jni-classBound="Ljava/lang/Object;"
+          classBound="java.lang.Object"
+          interfaceBounds=""
+          jni-interfaceBounds="" />
+      </typeParameters>
+      <implements
+        name="java.io.Serializable"
+        name-generic-aware="java.io.Serializable"
+        jni-type="Ljava/io/Serializable;" />
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="onFailure"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Exception;)V">
+        <parameter
+          name="p0"
+          type="java.lang.Exception"
+          jni-type="Ljava/lang/Exception;" />
+      </method>
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="onSuccess"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Object;)V">
+        <parameter
+          name="p0"
+          type="T"
+          jni-type="TT;" />
+      </method>
+    </interface>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="Config"
+      jni-signature="Lorg/jboss/aerogear/android/core/Config;"
+      static="false"
+      visibility="public">
+      <typeParameters>
+        <typeParameter
+          name="CFG"
+          jni-classBound=""
+          classBound=""
+          interfaceBounds="org.jboss.aerogear.android.core.Config"
+          jni-interfaceBounds="Lorg/jboss/aerogear/android/core/Config;" />
+      </typeParameters>
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="getName"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="setName"
+        native="false"
+        return="CFG"
+        jni-return="TCFG;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/core/Config;">
+        <parameter
+          name="p0"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+    </interface>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="ConfigurationProvider"
+      jni-signature="Lorg/jboss/aerogear/android/core/ConfigurationProvider;"
+      static="false"
+      visibility="public">
+      <typeParameters>
+        <typeParameter
+          name="CFG"
+          jni-classBound=""
+          classBound=""
+          interfaceBounds="org.jboss.aerogear.android.core.Config&lt;CFG&gt;"
+          jni-interfaceBounds="Lorg/jboss/aerogear/android/core/Config&lt;TCFG;&gt;;" />
+      </typeParameters>
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="newConfiguration"
+        native="false"
+        return="CFG"
+        jni-return="TCFG;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lorg/jboss/aerogear/android/core/Config;" />
+    </interface>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="Provider"
+      jni-signature="Lorg/jboss/aerogear/android/core/Provider;"
+      static="false"
+      visibility="public">
+      <typeParameters>
+        <typeParameter
+          name="T"
+          jni-classBound="Ljava/lang/Object;"
+          classBound="java.lang.Object"
+          interfaceBounds=""
+          jni-interfaceBounds="" />
+      </typeParameters>
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="T"
+        jni-return="TT;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="java.lang.Object..."
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+    </interface>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="ReadFilter"
+      jni-signature="Lorg/jboss/aerogear/android/core/ReadFilter;"
+      static="false"
+      visibility="public">
+      <implements
+        name="java.io.Serializable"
+        name-generic-aware="java.io.Serializable"
+        jni-type="Ljava/io/Serializable;" />
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="ReadFilter"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getLimit"
+        native="false"
+        return="java.lang.Integer"
+        jni-return="Ljava/lang/Integer;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/Integer;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getLinkUri"
+        native="false"
+        return="java.net.URI"
+        jni-return="Ljava/net/URI;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/net/URI;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getOffset"
+        native="false"
+        return="java.lang.Integer"
+        jni-return="Ljava/lang/Integer;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/Integer;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getQuery"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getWhere"
+        native="false"
+        return="org.json.JSONObject"
+        jni-return="Lorg/json/JSONObject;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lorg/json/JSONObject;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setLimit"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Integer;)V">
+        <parameter
+          name="limit"
+          type="java.lang.Integer"
+          jni-type="Ljava/lang/Integer;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setLinkUri"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/net/URI;)V">
+        <parameter
+          name="linkUri"
+          type="java.net.URI"
+          jni-type="Ljava/net/URI;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setOffset"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Integer;)V">
+        <parameter
+          name="offset"
+          type="java.lang.Integer"
+          jni-type="Ljava/lang/Integer;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setWhere"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/json/JSONObject;)V">
+        <parameter
+          name="where"
+          type="org.json.JSONObject"
+          jni-type="Lorg/json/JSONObject;" />
+      </method>
+    </class>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="RecordId"
+      jni-signature="Lorg/jboss/aerogear/android/core/RecordId;"
+      static="false"
+      visibility="public">
+      <implements
+        name="java.lang.annotation.Annotation"
+        name-generic-aware="java.lang.annotation.Annotation"
+        jni-type="Ljava/lang/annotation/Annotation;" />
+    </interface>
+  </package>
+  <package
+    name="org.jboss.aerogear.android.core.reflection"
+    jni-name="org/jboss/aerogear/android/core/reflection">
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/RuntimeException;"
+      extends="java.lang.RuntimeException"
+      extends-generic-aware="java.lang.RuntimeException"
+      final="false"
+      name="FieldNotFoundException"
+      jni-signature="Lorg/jboss/aerogear/android/core/reflection/FieldNotFoundException;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="FieldNotFoundException"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Class;Ljava/lang/String;)V">
+        <parameter
+          name="klass"
+          type="java.lang.Class"
+          jni-type="Ljava/lang/Class;" />
+        <parameter
+          name="fieldName"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </constructor>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="Property"
+      jni-signature="Lorg/jboss/aerogear/android/core/reflection/Property;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="Property"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Class;Ljava/lang/String;)V">
+        <parameter
+          name="klass"
+          type="java.lang.Class"
+          jni-type="Ljava/lang/Class;" />
+        <parameter
+          name="fieldName"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </constructor>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getFieldName"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getType"
+        native="false"
+        return="java.lang.Class"
+        jni-return="Ljava/lang/Class;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/Class;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getValue"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="instance"
+          type="java.lang.Object"
+          jni-type="Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setValue"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Object;Ljava/lang/Object;)V">
+        <parameter
+          name="instance"
+          type="java.lang.Object"
+          jni-type="Ljava/lang/Object;" />
+        <parameter
+          name="value"
+          type="java.lang.Object"
+          jni-type="Ljava/lang/Object;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/RuntimeException;"
+      extends="java.lang.RuntimeException"
+      extends-generic-aware="java.lang.RuntimeException"
+      final="false"
+      name="PropertyNotFoundException"
+      jni-signature="Lorg/jboss/aerogear/android/core/reflection/PropertyNotFoundException;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="PropertyNotFoundException"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)V">
+        <parameter
+          name="klass"
+          type="java.lang.Class"
+          jni-type="Ljava/lang/Class;" />
+        <parameter
+          name="type"
+          type="java.lang.Class"
+          jni-type="Ljava/lang/Class;" />
+        <parameter
+          name="fieldName"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </constructor>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/RuntimeException;"
+      extends="java.lang.RuntimeException"
+      extends-generic-aware="java.lang.RuntimeException"
+      final="false"
+      name="RecordIdNotFoundException"
+      jni-signature="Lorg/jboss/aerogear/android/core/reflection/RecordIdNotFoundException;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="RecordIdNotFoundException"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Class;)V">
+        <parameter
+          name="klass"
+          type="java.lang.Class"
+          jni-type="Ljava/lang/Class;" />
+      </constructor>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="Scan"
+      jni-signature="Lorg/jboss/aerogear/android/core/reflection/Scan;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="Scan"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="findIdValueIn"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Object;)Ljava/lang/String;">
+        <parameter
+          name="data"
+          type="java.lang.Object"
+          jni-type="Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="recordIdFieldNameIn"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Class;)Ljava/lang/String;">
+        <parameter
+          name="klass"
+          type="java.lang.Class"
+          jni-type="Ljava/lang/Class;" />
+      </method>
+    </class>
+  </package>
+  <package
+    name="org.jboss.aerogear.android.unifiedpush"
+    jni-name="org/jboss/aerogear/android/unifiedpush">
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="BuildConfig"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/BuildConfig;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="BuildConfig"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="APPLICATION_ID"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;org.jboss.aerogear.android.unifiedpush&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="BUILD_TYPE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;release&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="DEBUG"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="boolean"
+        type-generic-aware="boolean"
+        jni-signature="Z"
+        value="false"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="FLAVOR"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="VERSION_CODE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="int"
+        type-generic-aware="int"
+        jni-signature="I"
+        value="510"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="VERSION_NAME"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;5.1.0-SNAPSHOT&quot;"
+        visibility="public"
+        volatile="false" />
+    </class>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="MessageHandler"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;"
+      static="false"
+      visibility="public">
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="onMessage"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/content/Context;Landroid/os/Bundle;)V">
+        <parameter
+          name="p0"
+          type="android.content.Context"
+          jni-type="Landroid/content/Context;" />
+        <parameter
+          name="p1"
+          type="android.os.Bundle"
+          jni-type="Landroid/os/Bundle;" />
+      </method>
+    </interface>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="OnPushRegistrarCreatedListener"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/OnPushRegistrarCreatedListener;"
+      static="false"
+      visibility="public">
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="onPushRegistrarCreated"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration;Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;)V">
+        <parameter
+          name="p0"
+          type="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;?&gt;"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration&lt;*&gt;;" />
+        <parameter
+          name="p1"
+          type="org.jboss.aerogear.android.unifiedpush.PushRegistrar"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;" />
+      </method>
+    </interface>
+    <class
+      abstract="true"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="PushConfiguration"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration;"
+      static="false"
+      visibility="public">
+      <typeParameters>
+        <typeParameter
+          name="CONFIGURATION"
+          jni-classBound="Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration;"
+          classBound="org.jboss.aerogear.android.unifiedpush.PushConfiguration"
+          interfaceBounds=""
+          jni-interfaceBounds="" />
+      </typeParameters>
+      <implements
+        name="org.jboss.aerogear.android.core.Config"
+        name-generic-aware="org.jboss.aerogear.android.core.Config&lt;CONFIGURATION&gt;"
+        jni-type="Lorg/jboss/aerogear/android/core/Config&lt;TCONFIGURATION;&gt;;" />
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="PushConfiguration"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="addOnPushRegistrarCreatedListener"
+        native="false"
+        return="CONFIGURATION"
+        jni-return="TCONFIGURATION;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/OnPushRegistrarCreatedListener;)Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration;">
+        <parameter
+          name="listener"
+          type="org.jboss.aerogear.android.unifiedpush.OnPushRegistrarCreatedListener"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/OnPushRegistrarCreatedListener;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="true"
+        name="asRegistrar"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.PushRegistrar"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;" />
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="buildRegistrar"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.PushRegistrar"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getName"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getOnAuthenticationCreatedListeners"
+        native="false"
+        return="java.util.Collection&lt;org.jboss.aerogear.android.unifiedpush.OnPushRegistrarCreatedListener&gt;"
+        jni-return="Ljava/util/Collection&lt;Lorg/jboss/aerogear/android/unifiedpush/OnPushRegistrarCreatedListener;&gt;;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/util/Collection;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setName"
+        native="false"
+        return="org.jboss.aerogear.android.core.Config"
+        jni-return="Lorg/jboss/aerogear/android/core/Config;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/core/Config;">
+        <parameter
+          name="p0"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setName"
+        native="false"
+        return="CONFIGURATION"
+        jni-return="TCONFIGURATION;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration;">
+        <parameter
+          name="name"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setOnPushRegistrarCreatedListeners"
+        native="false"
+        return="CONFIGURATION"
+        jni-return="TCONFIGURATION;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/util/Collection;)Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration;">
+        <parameter
+          name="listeners"
+          type="java.util.Collection&lt;org.jboss.aerogear.android.unifiedpush.OnPushRegistrarCreatedListener&gt;"
+          jni-type="Ljava/util/Collection&lt;Lorg/jboss/aerogear/android/unifiedpush/OnPushRegistrarCreatedListener;&gt;;" />
+      </method>
+    </class>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="PushRegistrar"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;"
+      static="false"
+      visibility="public">
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="register"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/content/Context;Lorg/jboss/aerogear/android/core/Callback;)V">
+        <parameter
+          name="p0"
+          type="android.content.Context"
+          jni-type="Landroid/content/Context;" />
+        <parameter
+          name="p1"
+          type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;"
+          jni-type="Lorg/jboss/aerogear/android/core/Callback&lt;Ljava/lang/Void;&gt;;" />
+      </method>
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="unregister"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/content/Context;Lorg/jboss/aerogear/android/core/Callback;)V">
+        <parameter
+          name="p0"
+          type="android.content.Context"
+          jni-type="Landroid/content/Context;" />
+        <parameter
+          name="p1"
+          type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;"
+          jni-type="Lorg/jboss/aerogear/android/core/Callback&lt;Ljava/lang/Void;&gt;;" />
+      </method>
+    </interface>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="RegistrarManager"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/RegistrarManager;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="RegistrarManager"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="config"
+        native="false"
+        return="CFG"
+        jni-return="TCFG;"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;Ljava/lang/Class;)Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration;">
+        <typeParameters>
+          <typeParameter
+            name="CFG"
+            jni-classBound="Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration&lt;TCFG;&gt;;"
+            classBound="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;CFG&gt;"
+            interfaceBounds=""
+            jni-interfaceBounds="" />
+        </typeParameters>
+        <parameter
+          name="name"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="pushConfigurationClass"
+          type="java.lang.Class&lt;CFG&gt;"
+          jni-type="Ljava/lang/Class&lt;TCFG;&gt;;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getRegistrar"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.PushRegistrar"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;">
+        <parameter
+          name="name"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="notifyHandlers"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/content/Context;Landroid/os/Bundle;)V">
+        <parameter
+          name="context"
+          type="android.content.Context"
+          jni-type="Landroid/content/Context;" />
+        <parameter
+          name="message"
+          type="android.os.Bundle"
+          jni-type="Landroid/os/Bundle;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="notifyHandlers"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/content/Context;Landroid/os/Bundle;Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;)V">
+        <parameter
+          name="context"
+          type="android.content.Context"
+          jni-type="Landroid/content/Context;" />
+        <parameter
+          name="message"
+          type="android.os.Bundle"
+          jni-type="Landroid/os/Bundle;" />
+        <parameter
+          name="defaultHandler"
+          type="org.jboss.aerogear.android.unifiedpush.MessageHandler"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="registerBackgroundThreadHandler"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;)V">
+        <parameter
+          name="handler"
+          type="org.jboss.aerogear.android.unifiedpush.MessageHandler"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="registerConfigurationProvider"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Class;Lorg/jboss/aerogear/android/core/ConfigurationProvider;)V">
+        <typeParameters>
+          <typeParameter
+            name="CFG"
+            jni-classBound="Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration&lt;TCFG;&gt;;"
+            classBound="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;CFG&gt;"
+            interfaceBounds=""
+            jni-interfaceBounds="" />
+        </typeParameters>
+        <parameter
+          name="configurationClass"
+          type="java.lang.Class&lt;CFG&gt;"
+          jni-type="Ljava/lang/Class&lt;TCFG;&gt;;" />
+        <parameter
+          name="provider"
+          type="org.jboss.aerogear.android.core.ConfigurationProvider&lt;CFG&gt;"
+          jni-type="Lorg/jboss/aerogear/android/core/ConfigurationProvider&lt;TCFG;&gt;;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="registerMainThreadHandler"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;)V">
+        <parameter
+          name="handler"
+          type="org.jboss.aerogear.android.unifiedpush.MessageHandler"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="unregisterBackgroundThreadHandler"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;)V">
+        <parameter
+          name="handler"
+          type="org.jboss.aerogear.android.unifiedpush.MessageHandler"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="unregisterMainThreadHandler"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;)V">
+        <parameter
+          name="handler"
+          type="org.jboss.aerogear.android.unifiedpush.MessageHandler"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/MessageHandler;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="RegistrarManager.1"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/RegistrarManager$1;"
+      static="true"
+      visibility="">
+      <implements
+        name="org.jboss.aerogear.android.unifiedpush.OnPushRegistrarCreatedListener"
+        name-generic-aware="org.jboss.aerogear.android.unifiedpush.OnPushRegistrarCreatedListener"
+        jni-type="Lorg/jboss/aerogear/android/unifiedpush/OnPushRegistrarCreatedListener;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onPushRegistrarCreated"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration;Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;)V">
+        <parameter
+          name="configuration"
+          type="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;?&gt;"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration&lt;*&gt;;" />
+        <parameter
+          name="registrar"
+          type="org.jboss.aerogear.android.unifiedpush.PushRegistrar"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="RegistrarManager.2"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/RegistrarManager$2;"
+      static="true"
+      visibility="">
+      <implements
+        name="java.lang.Runnable"
+        name-generic-aware="java.lang.Runnable"
+        jni-type="Ljava/lang/Runnable;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="run"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="RegistrarManager.3"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/RegistrarManager$3;"
+      static="true"
+      visibility="">
+      <implements
+        name="java.lang.Runnable"
+        name-generic-aware="java.lang.Runnable"
+        jni-type="Ljava/lang/Runnable;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="run"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="RegistrarManager.4"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/RegistrarManager$4;"
+      static="true"
+      visibility="">
+      <implements
+        name="java.lang.Runnable"
+        name-generic-aware="java.lang.Runnable"
+        jni-type="Ljava/lang/Runnable;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="run"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+    </class>
+  </package>
+  <package
+    name="org.jboss.aerogear.android.unifiedpush.fcm"
+    jni-name="org/jboss/aerogear/android/unifiedpush/fcm">
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Lcom/google/firebase/messaging/FirebaseMessagingService;"
+      extends="com.google.firebase.messaging.FirebaseMessagingService"
+      extends-generic-aware="com.google.firebase.messaging.FirebaseMessagingService"
+      final="false"
+      name="AeroGearFCMMessageReceiver"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMMessageReceiver;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="AeroGearFCMMessageReceiver"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onMessageReceived"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lcom/google/firebase/messaging/RemoteMessage;)V">
+        <parameter
+          name="remoteMessage"
+          type="com.google.firebase.messaging.RemoteMessage"
+          jni-type="Lcom/google/firebase/messaging/RemoteMessage;" />
+      </method>
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="DEFAULT_MESSAGE_HANDLER_KEY"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;DEFAULT_MESSAGE_HANDLER_KEY&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="NOTIFICATION_ID"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="int"
+        type-generic-aware="int"
+        jni-signature="I"
+        value="1"
+        visibility="public"
+        volatile="false" />
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration;"
+      extends="org.jboss.aerogear.android.unifiedpush.PushConfiguration"
+      extends-generic-aware="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration&gt;"
+      final="false"
+      name="AeroGearFCMPushConfiguration"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="AeroGearFCMPushConfiguration"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="addCategories"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/util/List;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="categories"
+          type="java.util.List&lt;java.lang.String&gt;"
+          jni-type="Ljava/util/List&lt;Ljava/lang/String;&gt;;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="addCategory"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="category"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="true"
+        name="buildRegistrar"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushRegistrar"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="buildRegistrar"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.PushRegistrar"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="true"
+        synthetic="true"
+        jni-signature="()Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getAlias"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getCategories"
+        native="false"
+        return="java.util.List&lt;java.lang.String&gt;"
+        jni-return="Ljava/util/List&lt;Ljava/lang/String;&gt;;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/util/List;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getDeviceToken"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getDeviceType"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getOperatingSystem"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getOsVersion"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getPushServerURI"
+        native="false"
+        return="java.net.URI"
+        jni-return="Ljava/net/URI;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/net/URI;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getSecret"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getSenderId"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getVariantID"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setAlias"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="alias"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setCategories"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/util/List;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="categories"
+          type="java.util.List&lt;java.lang.String&gt;"
+          jni-type="Ljava/util/List&lt;Ljava/lang/String;&gt;;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setCategories"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="categories"
+          type="java.lang.String..."
+          jni-type="[Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setDeviceType"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="deviceType"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setOperatingSystem"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="operatingSystem"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setPushServerURI"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/net/URI;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="pushServerURI"
+          type="java.net.URI"
+          jni-type="Ljava/net/URI;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setSecret"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="secret"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setSenderId"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="senderId"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setVariantID"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;">
+        <parameter
+          name="variantID"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="AeroGearFCMPushConfigurationProvider"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfigurationProvider;"
+      static="false"
+      visibility="public">
+      <implements
+        name="org.jboss.aerogear.android.core.ConfigurationProvider"
+        name-generic-aware="org.jboss.aerogear.android.core.ConfigurationProvider&lt;org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration&gt;"
+        jni-type="Lorg/jboss/aerogear/android/core/ConfigurationProvider&lt;Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;&gt;;" />
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="AeroGearFCMPushConfigurationProvider"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="newConfiguration"
+        native="false"
+        return="org.jboss.aerogear.android.core.Config"
+        jni-return="Lorg/jboss/aerogear/android/core/Config;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="()Lorg/jboss/aerogear/android/core/Config;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="newConfiguration"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushConfiguration;" />
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Lorg/jboss/aerogear/android/unifiedpush/PushConfiguration;"
+      extends="org.jboss.aerogear.android.unifiedpush.PushConfiguration"
+      extends-generic-aware="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration&gt;"
+      final="false"
+      name="AeroGearFCMPushJsonConfiguration"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="AeroGearFCMPushJsonConfiguration"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="addCategories"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/util/List;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;">
+        <parameter
+          name="categories"
+          type="java.util.List&lt;java.lang.String&gt;"
+          jni-type="Ljava/util/List&lt;Ljava/lang/String;&gt;;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="addCategory"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;">
+        <parameter
+          name="category"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="true"
+        name="buildRegistrar"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushRegistrar"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="buildRegistrar"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.PushRegistrar"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="true"
+        synthetic="true"
+        jni-signature="()Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getAlias"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getCategories"
+        native="false"
+        return="java.util.List&lt;java.lang.String&gt;"
+        jni-return="Ljava/util/List&lt;Ljava/lang/String;&gt;;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/util/List;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getDeviceToken"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getDeviceType"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getFileName"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getOperatingSystem"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getOsVersion"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getPushServerURI"
+        native="false"
+        return="java.net.URI"
+        jni-return="Ljava/net/URI;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/net/URI;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getSecret"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getSenderId"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getVariantID"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="loadConfigJson"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/content/Context;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;">
+        <parameter
+          name="context"
+          type="android.content.Context"
+          jni-type="Landroid/content/Context;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setAlias"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;">
+        <parameter
+          name="alias"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setCategories"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/util/List;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;">
+        <parameter
+          name="categories"
+          type="java.util.List&lt;java.lang.String&gt;"
+          jni-type="Ljava/util/List&lt;Ljava/lang/String;&gt;;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setCategories"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;">
+        <parameter
+          name="categories"
+          type="java.lang.String..."
+          jni-type="[Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setDeviceType"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;">
+        <parameter
+          name="deviceType"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setFileName"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)V">
+        <parameter
+          name="fileName"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setOperatingSystem"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;">
+        <parameter
+          name="operatingSystem"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setSenderId"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;">
+        <parameter
+          name="senderId"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="AeroGearFCMPushJsonConfigurationProvider"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfigurationProvider;"
+      static="false"
+      visibility="public">
+      <implements
+        name="org.jboss.aerogear.android.core.ConfigurationProvider"
+        name-generic-aware="org.jboss.aerogear.android.core.ConfigurationProvider&lt;org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration&gt;"
+        jni-type="Lorg/jboss/aerogear/android/core/ConfigurationProvider&lt;Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;&gt;;" />
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="AeroGearFCMPushJsonConfigurationProvider"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="newConfiguration"
+        native="false"
+        return="org.jboss.aerogear.android.core.Config"
+        jni-return="Lorg/jboss/aerogear/android/core/Config;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="()Lorg/jboss/aerogear/android/core/Config;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="newConfiguration"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushJsonConfiguration;" />
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="AeroGearFCMPushRegistrar"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar;"
+      static="false"
+      visibility="public">
+      <implements
+        name="org.jboss.aerogear.android.unifiedpush.PushRegistrar"
+        name-generic-aware="org.jboss.aerogear.android.unifiedpush.PushRegistrar"
+        jni-type="Lorg/jboss/aerogear/android/unifiedpush/PushRegistrar;" />
+      <implements
+        name="org.jboss.aerogear.android.unifiedpush.metrics.MetricsSender"
+        name-generic-aware="org.jboss.aerogear.android.unifiedpush.metrics.MetricsSender&lt;org.jboss.aerogear.android.unifiedpush.metrics.UnifiedPushMetricsMessage&gt;"
+        jni-type="Lorg/jboss/aerogear/android/unifiedpush/metrics/MetricsSender&lt;Lorg/jboss/aerogear/android/unifiedpush/metrics/UnifiedPushMetricsMessage;&gt;;" />
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="AeroGearFCMPushRegistrar"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;)V">
+        <parameter
+          name="config"
+          type="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;" />
+      </constructor>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="register"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/content/Context;Lorg/jboss/aerogear/android/core/Callback;)V">
+        <parameter
+          name="context"
+          type="android.content.Context"
+          jni-type="Landroid/content/Context;" />
+        <parameter
+          name="callback"
+          type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;"
+          jni-type="Lorg/jboss/aerogear/android/core/Callback&lt;Ljava/lang/Void;&gt;;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="sendMetrics"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/metrics/MetricsMessage;Lorg/jboss/aerogear/android/core/Callback;)V">
+        <parameter
+          name="p0"
+          type="org.jboss.aerogear.android.unifiedpush.metrics.MetricsMessage"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/metrics/MetricsMessage;" />
+        <parameter
+          name="p1"
+          type="org.jboss.aerogear.android.core.Callback"
+          jni-type="Lorg/jboss/aerogear/android/core/Callback;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="sendMetrics"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/metrics/UnifiedPushMetricsMessage;Lorg/jboss/aerogear/android/core/Callback;)V">
+        <parameter
+          name="metricsMessage"
+          type="org.jboss.aerogear.android.unifiedpush.metrics.UnifiedPushMetricsMessage"
+          jni-type="Lorg/jboss/aerogear/android/unifiedpush/metrics/UnifiedPushMetricsMessage;" />
+        <parameter
+          name="callback"
+          type="org.jboss.aerogear.android.core.Callback&lt;org.jboss.aerogear.android.unifiedpush.metrics.UnifiedPushMetricsMessage&gt;"
+          jni-type="Lorg/jboss/aerogear/android/core/Callback&lt;Lorg/jboss/aerogear/android/unifiedpush/metrics/UnifiedPushMetricsMessage;&gt;;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setPasswordAuthentication"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;Ljava/lang/String;Lorg/jboss/aerogear/android/pipe/http/HttpProvider;)V">
+        <parameter
+          name="username"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="password"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="provider"
+          type="org.jboss.aerogear.android.pipe.http.HttpProvider"
+          jni-type="Lorg/jboss/aerogear/android/pipe/http/HttpProvider;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="unregister"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/content/Context;Lorg/jboss/aerogear/android/core/Callback;)V">
+        <parameter
+          name="context"
+          type="android.content.Context"
+          jni-type="Landroid/content/Context;" />
+        <parameter
+          name="callback"
+          type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;"
+          jni-type="Lorg/jboss/aerogear/android/core/Callback&lt;Ljava/lang/Void;&gt;;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="AeroGearFCMPushRegistrar.1"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar$1;"
+      static="false"
+      visibility="">
+      <implements
+        name="org.jboss.aerogear.android.core.Provider"
+        name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;org.jboss.aerogear.android.pipe.http.HttpProvider&gt;"
+        jni-type="Lorg/jboss/aerogear/android/core/Provider&lt;Lorg/jboss/aerogear/android/pipe/http/HttpProvider;&gt;;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="([Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="java.lang.Object[]"
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="org.jboss.aerogear.android.pipe.http.HttpProvider"
+        jni-return="Lorg/jboss/aerogear/android/pipe/http/HttpProvider;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/Object;)Lorg/jboss/aerogear/android/pipe/http/HttpProvider;">
+        <parameter
+          name="in"
+          type="java.lang.Object..."
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="AeroGearFCMPushRegistrar.2"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar$2;"
+      static="false"
+      visibility="">
+      <implements
+        name="org.jboss.aerogear.android.core.Provider"
+        name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;com.google.firebase.iid.FirebaseInstanceId&gt;"
+        jni-type="Lorg/jboss/aerogear/android/core/Provider&lt;Lcom/google/firebase/iid/FirebaseInstanceId;&gt;;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="com.google.firebase.iid.FirebaseInstanceId"
+        jni-return="Lcom/google/firebase/iid/FirebaseInstanceId;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/Object;)Lcom/google/firebase/iid/FirebaseInstanceId;">
+        <parameter
+          name="context"
+          type="java.lang.Object..."
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="([Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="java.lang.Object[]"
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="AeroGearFCMPushRegistrar.3"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar$3;"
+      static="false"
+      visibility="">
+      <implements
+        name="org.jboss.aerogear.android.core.Provider"
+        name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;com.google.firebase.messaging.FirebaseMessaging&gt;"
+        jni-type="Lorg/jboss/aerogear/android/core/Provider&lt;Lcom/google/firebase/messaging/FirebaseMessaging;&gt;;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="com.google.firebase.messaging.FirebaseMessaging"
+        jni-return="Lcom/google/firebase/messaging/FirebaseMessaging;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/Object;)Lcom/google/firebase/messaging/FirebaseMessaging;">
+        <parameter
+          name="context"
+          type="java.lang.Object..."
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="([Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="java.lang.Object[]"
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Landroid/os/AsyncTask;"
+      extends="android.os.AsyncTask"
+      extends-generic-aware="android.os.AsyncTask&lt;java.lang.Void, java.lang.Void, java.lang.Exception&gt;"
+      final="false"
+      name="AeroGearFCMPushRegistrar.4"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar$4;"
+      static="false"
+      visibility="">
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="doInBackground"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="true"
+        synthetic="true"
+        jni-signature="([Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="java.lang.Object[]"
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="doInBackground"
+        native="false"
+        return="java.lang.Exception"
+        jni-return="Ljava/lang/Exception;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/Void;)Ljava/lang/Exception;">
+        <parameter
+          name="params"
+          type="java.lang.Void..."
+          jni-type="[Ljava/lang/Void;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onPostExecute"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Exception;)V">
+        <parameter
+          name="result"
+          type="java.lang.Exception"
+          jni-type="Ljava/lang/Exception;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onPostExecute"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="true"
+        synthetic="true"
+        jni-signature="(Ljava/lang/Object;)V">
+        <parameter
+          name="p0"
+          type="java.lang.Object"
+          jni-type="Ljava/lang/Object;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Landroid/os/AsyncTask;"
+      extends="android.os.AsyncTask"
+      extends-generic-aware="android.os.AsyncTask&lt;java.lang.Void, java.lang.Void, java.lang.Exception&gt;"
+      final="false"
+      name="AeroGearFCMPushRegistrar.5"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar$5;"
+      static="false"
+      visibility="">
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="doInBackground"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="true"
+        synthetic="true"
+        jni-signature="([Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="java.lang.Object[]"
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="doInBackground"
+        native="false"
+        return="java.lang.Exception"
+        jni-return="Ljava/lang/Exception;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/Void;)Ljava/lang/Exception;">
+        <parameter
+          name="params"
+          type="java.lang.Void..."
+          jni-type="[Ljava/lang/Void;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onPostExecute"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Exception;)V">
+        <parameter
+          name="result"
+          type="java.lang.Exception"
+          jni-type="Ljava/lang/Exception;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onPostExecute"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="true"
+        synthetic="true"
+        jni-signature="(Ljava/lang/Object;)V">
+        <parameter
+          name="p0"
+          type="java.lang.Object"
+          jni-type="Ljava/lang/Object;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Landroid/os/AsyncTask;"
+      extends="android.os.AsyncTask"
+      extends-generic-aware="android.os.AsyncTask&lt;java.lang.Void, java.lang.Void, java.lang.Exception&gt;"
+      final="false"
+      name="AeroGearFCMPushRegistrar.6"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/AeroGearFCMPushRegistrar$6;"
+      static="false"
+      visibility="">
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="doInBackground"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="true"
+        synthetic="true"
+        jni-signature="([Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="java.lang.Object[]"
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="doInBackground"
+        native="false"
+        return="java.lang.Exception"
+        jni-return="Ljava/lang/Exception;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/Void;)Ljava/lang/Exception;">
+        <parameter
+          name="params"
+          type="java.lang.Void..."
+          jni-type="[Ljava/lang/Void;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onPostExecute"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/Exception;)V">
+        <parameter
+          name="result"
+          type="java.lang.Exception"
+          jni-type="Ljava/lang/Exception;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onPostExecute"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="true"
+        synthetic="true"
+        jni-signature="(Ljava/lang/Object;)V">
+        <parameter
+          name="p0"
+          type="java.lang.Object"
+          jni-type="Ljava/lang/Object;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="FCMSharedPreferenceProvider"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/FCMSharedPreferenceProvider;"
+      static="false"
+      visibility="public">
+      <implements
+        name="org.jboss.aerogear.android.core.Provider"
+        name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;android.content.SharedPreferences&gt;"
+        jni-type="Lorg/jboss/aerogear/android/core/Provider&lt;Landroid/content/SharedPreferences;&gt;;" />
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="FCMSharedPreferenceProvider"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="android.content.SharedPreferences"
+        jni-return="Landroid/content/SharedPreferences;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/Object;)Landroid/content/SharedPreferences;">
+        <parameter
+          name="in"
+          type="java.lang.Object..."
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="([Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="java.lang.Object[]"
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="UnifiedPushConfig"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="UnifiedPushConfig"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="addCategories"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/util/List;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="categories"
+          type="java.util.List&lt;java.lang.String&gt;"
+          jni-type="Ljava/util/List&lt;Ljava/lang/String;&gt;;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="addCategory"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="category"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="checkRequiredFields"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getAlias"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getCategories"
+        native="false"
+        return="java.util.List&lt;java.lang.String&gt;"
+        jni-return="Ljava/util/List&lt;Ljava/lang/String;&gt;;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/util/List;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getDeviceToken"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getDeviceType"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getOperatingSystem"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getOsVersion"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getPushServerURI"
+        native="false"
+        return="java.net.URI"
+        jni-return="Ljava/net/URI;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/net/URI;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getSecret"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getSenderId"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getVariantID"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setAlias"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="alias"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setCategories"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/util/List;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="categories"
+          type="java.util.List&lt;java.lang.String&gt;"
+          jni-type="Ljava/util/List&lt;Ljava/lang/String;&gt;;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setCategories"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="categories"
+          type="java.lang.String..."
+          jni-type="[Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setDeviceType"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="deviceType"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setOperatingSystem"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="operatingSystem"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setPushServerURI"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/net/URI;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="pushServerURI"
+          type="java.net.URI"
+          jni-type="Ljava/net/URI;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setSecret"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="secret"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setSenderId"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="senderId"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setVariantID"
+        native="false"
+        return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig"
+        jni-return="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushConfig;">
+        <parameter
+          name="variantID"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Lcom/google/firebase/iid/FirebaseInstanceIdService;"
+      extends="com.google.firebase.iid.FirebaseInstanceIdService"
+      extends-generic-aware="com.google.firebase.iid.FirebaseInstanceIdService"
+      final="false"
+      name="UnifiedPushInstanceIDListenerService"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushInstanceIDListenerService;"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="UnifiedPushInstanceIDListenerService"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onTokenRefresh"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="UnifiedPushInstanceIDListenerService.1"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushInstanceIDListenerService$1;"
+      static="false"
+      visibility="">
+      <implements
+        name="org.jboss.aerogear.android.core.Provider"
+        name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;com.google.firebase.iid.FirebaseInstanceId&gt;"
+        jni-type="Lorg/jboss/aerogear/android/core/Provider&lt;Lcom/google/firebase/iid/FirebaseInstanceId;&gt;;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="com.google.firebase.iid.FirebaseInstanceId"
+        jni-return="Lcom/google/firebase/iid/FirebaseInstanceId;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/Object;)Lcom/google/firebase/iid/FirebaseInstanceId;">
+        <parameter
+          name="context"
+          type="java.lang.Object..."
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="([Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="java.lang.Object[]"
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="UnifiedPushInstanceIDListenerService.2"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushInstanceIDListenerService$2;"
+      static="false"
+      visibility="">
+      <implements
+        name="org.jboss.aerogear.android.core.Provider"
+        name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;org.jboss.aerogear.android.pipe.http.HttpProvider&gt;"
+        jni-type="Lorg/jboss/aerogear/android/core/Provider&lt;Lorg/jboss/aerogear/android/pipe/http/HttpProvider;&gt;;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="([Ljava/lang/Object;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="java.lang.Object[]"
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="get"
+        native="false"
+        return="org.jboss.aerogear.android.pipe.http.HttpProvider"
+        jni-return="Lorg/jboss/aerogear/android/pipe/http/HttpProvider;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="([Ljava/lang/Object;)Lorg/jboss/aerogear/android/pipe/http/HttpProvider;">
+        <parameter
+          name="in"
+          type="java.lang.Object..."
+          jni-type="[Ljava/lang/Object;" />
+      </method>
+    </class>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="UnifiedPushMessage"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/fcm/UnifiedPushMessage;"
+      static="false"
+      visibility="public">
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="ALERT_KEY"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;alert&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="PUSH_MESSAGE_ID"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;aerogear-push-id&quot;"
+        visibility="public"
+        volatile="false" />
+    </interface>
+  </package>
+  <package
+    name="org.jboss.aerogear.android.unifiedpush.metrics"
+    jni-name="org/jboss/aerogear/android/unifiedpush/metrics">
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="MetricsMessage"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/metrics/MetricsMessage;"
+      static="false"
+      visibility="public">
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="getMessageId"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+    </interface>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="MetricsSender"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/metrics/MetricsSender;"
+      static="false"
+      visibility="public">
+      <typeParameters>
+        <typeParameter
+          name="T"
+          jni-classBound=""
+          classBound=""
+          interfaceBounds="org.jboss.aerogear.android.unifiedpush.metrics.MetricsMessage"
+          jni-interfaceBounds="Lorg/jboss/aerogear/android/unifiedpush/metrics/MetricsMessage;" />
+      </typeParameters>
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="sendMetrics"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/jboss/aerogear/android/unifiedpush/metrics/MetricsMessage;Lorg/jboss/aerogear/android/core/Callback;)V">
+        <parameter
+          name="p0"
+          type="T"
+          jni-type="TT;" />
+        <parameter
+          name="p1"
+          type="org.jboss.aerogear.android.core.Callback&lt;T&gt;"
+          jni-type="Lorg/jboss/aerogear/android/core/Callback&lt;TT;&gt;;" />
+      </method>
+    </interface>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="UnifiedPushMetricsMessage"
+      jni-signature="Lorg/jboss/aerogear/android/unifiedpush/metrics/UnifiedPushMetricsMessage;"
+      static="false"
+      visibility="public">
+      <implements
+        name="org.jboss.aerogear.android.unifiedpush.metrics.MetricsMessage"
+        name-generic-aware="org.jboss.aerogear.android.unifiedpush.metrics.MetricsMessage"
+        jni-type="Lorg/jboss/aerogear/android/unifiedpush/metrics/MetricsMessage;" />
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="UnifiedPushMetricsMessage"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/os/Bundle;)V">
+        <parameter
+          name="bundle"
+          type="android.os.Bundle"
+          jni-type="Landroid/os/Bundle;" />
+      </constructor>
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="UnifiedPushMetricsMessage"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)V">
+        <parameter
+          name="messageId"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </constructor>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getMessageId"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+    </class>
+  </package>
+</api>

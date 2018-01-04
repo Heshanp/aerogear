@@ -1,0 +1,740 @@
+<api>
+  <package name="org.jboss.aerogear.android.core">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildConfig" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="BuildConfig" static="false" type="org.jboss.aerogear.android.core.BuildConfig" visibility="public">
+      </constructor>
+      <field deprecated="not deprecated" final="true" name="APPLICATION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;org.jboss.aerogear.android.core&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="410" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;4.1.0-SNAPSHOT&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Callback" static="false" visibility="public">
+      <implements name="java.io.Serializable" name-generic-aware="java.io.Serializable">
+      </implements>
+      <typeParameters>
+        <typeParameter name="T"></typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onFailure" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Exception">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onSuccess" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T">
+        </parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Config" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="CFG">
+          <genericConstraints>
+            <genericConstraint type="org.jboss.aerogear.android.core.Config">
+            </genericConstraint>
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setName" native="false" return="CFG" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ConfigurationProvider" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="CFG">
+          <genericConstraints>
+            <genericConstraint type="org.jboss.aerogear.android.core.Config&lt;CFG&gt;">
+            </genericConstraint>
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="newConfiguration" native="false" return="CFG" static="false" synchronized="false" visibility="public">
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Provider" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="T"></typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="get" native="false" return="T" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Object...">
+        </parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ReadFilter" static="false" visibility="public">
+      <implements name="java.io.Serializable" name-generic-aware="java.io.Serializable">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="ReadFilter" static="false" type="org.jboss.aerogear.android.core.ReadFilter" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLimit" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLinkUri" native="false" return="java.net.URI" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOffset" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getQuery" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getWhere" native="false" return="org.json.JSONObject" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setLimit" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="limit" type="java.lang.Integer">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setLinkUri" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="linkUri" type="java.net.URI">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOffset" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="offset" type="java.lang.Integer">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setWhere" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="where" type="org.json.JSONObject">
+        </parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="RecordId" static="false" visibility="public">
+      <implements name="java.lang.annotation.Annotation" name-generic-aware="java.lang.annotation.Annotation">
+      </implements>
+    </interface>
+  </package>
+  <package name="org.jboss.aerogear.android.core.reflection">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.RuntimeException" extends-generic-aware="java.lang.RuntimeException" final="false" name="FieldNotFoundException" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="FieldNotFoundException" static="false" type="org.jboss.aerogear.android.core.reflection.FieldNotFoundException" visibility="public">
+        <parameter name="klass" type="java.lang.Class">
+        </parameter>
+        <parameter name="fieldName" type="java.lang.String">
+        </parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Property" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Property" static="false" type="org.jboss.aerogear.android.core.reflection.Property" visibility="public">
+        <parameter name="klass" type="java.lang.Class">
+        </parameter>
+        <parameter name="fieldName" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFieldName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getType" native="false" return="java.lang.Class" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getValue" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+        <parameter name="instance" type="java.lang.Object">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setValue" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="instance" type="java.lang.Object">
+        </parameter>
+        <parameter name="value" type="java.lang.Object">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.RuntimeException" extends-generic-aware="java.lang.RuntimeException" final="false" name="PropertyNotFoundException" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="PropertyNotFoundException" static="false" type="org.jboss.aerogear.android.core.reflection.PropertyNotFoundException" visibility="public">
+        <parameter name="klass" type="java.lang.Class">
+        </parameter>
+        <parameter name="type" type="java.lang.Class">
+        </parameter>
+        <parameter name="fieldName" type="java.lang.String">
+        </parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.RuntimeException" extends-generic-aware="java.lang.RuntimeException" final="false" name="RecordIdNotFoundException" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="RecordIdNotFoundException" static="false" type="org.jboss.aerogear.android.core.reflection.RecordIdNotFoundException" visibility="public">
+        <parameter name="klass" type="java.lang.Class">
+        </parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Scan" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Scan" static="false" type="org.jboss.aerogear.android.core.reflection.Scan" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="findIdValueIn" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="data" type="java.lang.Object">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="recordIdFieldNameIn" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="klass" type="java.lang.Class">
+        </parameter>
+      </method>
+    </class>
+  </package>
+  <package name="org.jboss.aerogear.android.unifiedpush">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildConfig" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="BuildConfig" static="false" type="org.jboss.aerogear.android.unifiedpush.BuildConfig" visibility="public">
+      </constructor>
+      <field deprecated="not deprecated" final="true" name="APPLICATION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;org.jboss.aerogear.android.unifiedpush&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="510" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;5.1.0-SNAPSHOT&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="MessageHandler" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.os.Bundle">
+        </parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="OnPushRegistrarCreatedListener" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onPushRegistrarCreated" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;?&gt;">
+        </parameter>
+        <parameter name="p1" type="org.jboss.aerogear.android.unifiedpush.PushRegistrar">
+        </parameter>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PushConfiguration" static="false" visibility="public">
+      <implements name="org.jboss.aerogear.android.core.Config" name-generic-aware="org.jboss.aerogear.android.core.Config&lt;CONFIGURATION&gt;">
+      </implements>
+      <typeParameters>
+        <typeParameter name="CONFIGURATION">
+          <genericConstraints>
+            <genericConstraint type="org.jboss.aerogear.android.unifiedpush.PushConfiguration">
+            </genericConstraint>
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <constructor deprecated="not deprecated" final="false" name="PushConfiguration" static="false" type="org.jboss.aerogear.android.unifiedpush.PushConfiguration" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addOnPushRegistrarCreatedListener" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+        <parameter name="listener" type="org.jboss.aerogear.android.unifiedpush.OnPushRegistrarCreatedListener">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="true" name="asRegistrar" native="false" return="org.jboss.aerogear.android.unifiedpush.PushRegistrar" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="buildRegistrar" native="false" return="org.jboss.aerogear.android.unifiedpush.PushRegistrar" static="false" synchronized="false" visibility="protected">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOnAuthenticationCreatedListeners" native="false" return="java.util.Collection&lt;org.jboss.aerogear.android.unifiedpush.OnPushRegistrarCreatedListener&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setName" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+        <parameter name="name" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOnPushRegistrarCreatedListeners" native="false" return="CONFIGURATION" static="false" synchronized="false" visibility="public">
+        <parameter name="listeners" type="java.util.Collection&lt;org.jboss.aerogear.android.unifiedpush.OnPushRegistrarCreatedListener&gt;">
+        </parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="PushRegistrar" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="register" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="unregister" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;">
+        </parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RegistrarManager" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="RegistrarManager" static="false" type="org.jboss.aerogear.android.unifiedpush.RegistrarManager" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="config" native="false" return="CFG" static="true" synchronized="false" visibility="public">
+        <typeParameters>
+          <typeParameter name="CFG">
+            <genericConstraints>
+              <genericConstraint type="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;CFG&gt;">
+            </genericConstraint>
+            </genericConstraints>
+          </typeParameter>
+      </typeParameters>
+        <parameter name="name" type="java.lang.String">
+        </parameter>
+        <parameter name="pushConfigurationClass" type="java.lang.Class&lt;CFG&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getRegistrar" native="false" return="org.jboss.aerogear.android.unifiedpush.PushRegistrar" static="true" synchronized="false" visibility="public">
+        <parameter name="name" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="notifyHandlers" native="false" return="void" static="true" synchronized="false" visibility="protected">
+        <parameter name="context" type="android.content.Context">
+        </parameter>
+        <parameter name="message" type="android.os.Bundle">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="notifyHandlers" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="context" type="android.content.Context">
+        </parameter>
+        <parameter name="message" type="android.os.Bundle">
+        </parameter>
+        <parameter name="defaultHandler" type="org.jboss.aerogear.android.unifiedpush.MessageHandler">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="registerBackgroundThreadHandler" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="handler" type="org.jboss.aerogear.android.unifiedpush.MessageHandler">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="registerConfigurationProvider" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <typeParameters>
+          <typeParameter name="CFG">
+            <genericConstraints>
+              <genericConstraint type="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;CFG&gt;">
+            </genericConstraint>
+            </genericConstraints>
+          </typeParameter>
+      </typeParameters>
+        <parameter name="configurationClass" type="java.lang.Class&lt;CFG&gt;">
+        </parameter>
+        <parameter name="provider" type="org.jboss.aerogear.android.core.ConfigurationProvider&lt;CFG&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="registerMainThreadHandler" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="handler" type="org.jboss.aerogear.android.unifiedpush.MessageHandler">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="unregisterBackgroundThreadHandler" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="handler" type="org.jboss.aerogear.android.unifiedpush.MessageHandler">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="unregisterMainThreadHandler" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="handler" type="org.jboss.aerogear.android.unifiedpush.MessageHandler">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="RegistrarManager.1" static="true" visibility="">
+      <implements name="org.jboss.aerogear.android.unifiedpush.OnPushRegistrarCreatedListener" name-generic-aware="org.jboss.aerogear.android.unifiedpush.OnPushRegistrarCreatedListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPushRegistrarCreated" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="configuration" type="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;?&gt;">
+        </parameter>
+        <parameter name="registrar" type="org.jboss.aerogear.android.unifiedpush.PushRegistrar">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="RegistrarManager.2" static="true" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="RegistrarManager.3" static="true" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="RegistrarManager.4" static="true" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+  </package>
+  <package name="org.jboss.aerogear.android.unifiedpush.fcm">
+    <class abstract="false" deprecated="not deprecated" extends="com.google.firebase.messaging.FirebaseMessagingService" extends-generic-aware="com.google.firebase.messaging.FirebaseMessagingService" final="false" name="AeroGearFCMMessageReceiver" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="AeroGearFCMMessageReceiver" static="false" type="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMMessageReceiver" visibility="public">
+      </constructor>
+      <field deprecated="not deprecated" final="true" name="DEFAULT_MESSAGE_HANDLER_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;DEFAULT_MESSAGE_HANDLER_KEY&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="NOTIFICATION_ID" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="org.jboss.aerogear.android.unifiedpush.PushConfiguration" extends-generic-aware="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration&gt;" final="false" name="AeroGearFCMPushConfiguration" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="AeroGearFCMPushConfiguration" static="false" type="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addCategories" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="categories" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addCategory" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="category" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="true" name="buildRegistrar" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushRegistrar" static="false" synchronized="false" visibility="protected">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAlias" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCategories" native="false" return="java.util.List&lt;java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceToken" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceType" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOperatingSystem" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOsVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPushServerURI" native="false" return="java.net.URI" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSecret" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSenderId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getVariantID" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAlias" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="alias" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCategories" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="categories" type="java.lang.String...">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCategories" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="categories" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDeviceType" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="deviceType" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOperatingSystem" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="operatingSystem" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPushServerURI" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="pushServerURI" type="java.net.URI">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSecret" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="secret" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSenderId" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="senderId" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setVariantID" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="variantID" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AeroGearFCMPushConfigurationProvider" static="false" visibility="public">
+      <implements name="org.jboss.aerogear.android.core.ConfigurationProvider" name-generic-aware="org.jboss.aerogear.android.core.ConfigurationProvider&lt;org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration&gt;">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="AeroGearFCMPushConfigurationProvider" static="false" type="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfigurationProvider" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newConfiguration" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushConfiguration" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="org.jboss.aerogear.android.unifiedpush.PushConfiguration" extends-generic-aware="org.jboss.aerogear.android.unifiedpush.PushConfiguration&lt;org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration&gt;" final="false" name="AeroGearFCMPushJsonConfiguration" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="AeroGearFCMPushJsonConfiguration" static="false" type="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addCategories" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="categories" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addCategory" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="category" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="true" name="buildRegistrar" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushRegistrar" static="false" synchronized="false" visibility="protected">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAlias" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCategories" native="false" return="java.util.List&lt;java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceToken" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceType" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFileName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOperatingSystem" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOsVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPushServerURI" native="false" return="java.net.URI" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSecret" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSenderId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getVariantID" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="loadConfigJson" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="context" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAlias" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="alias" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCategories" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="categories" type="java.lang.String...">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCategories" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="categories" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDeviceType" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="deviceType" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFileName" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="fileName" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOperatingSystem" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="operatingSystem" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSenderId" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" static="false" synchronized="false" visibility="public">
+        <parameter name="senderId" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AeroGearFCMPushJsonConfigurationProvider" static="false" visibility="public">
+      <implements name="org.jboss.aerogear.android.core.ConfigurationProvider" name-generic-aware="org.jboss.aerogear.android.core.ConfigurationProvider&lt;org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration&gt;">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="AeroGearFCMPushJsonConfigurationProvider" static="false" type="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfigurationProvider" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newConfiguration" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushJsonConfiguration" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AeroGearFCMPushRegistrar" static="false" visibility="public">
+      <implements name="org.jboss.aerogear.android.unifiedpush.PushRegistrar" name-generic-aware="org.jboss.aerogear.android.unifiedpush.PushRegistrar">
+      </implements>
+      <implements name="org.jboss.aerogear.android.unifiedpush.metrics.MetricsSender" name-generic-aware="org.jboss.aerogear.android.unifiedpush.metrics.MetricsSender&lt;org.jboss.aerogear.android.unifiedpush.metrics.UnifiedPushMetricsMessage&gt;">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="AeroGearFCMPushRegistrar" static="false" type="org.jboss.aerogear.android.unifiedpush.fcm.AeroGearFCMPushRegistrar" visibility="public">
+        <parameter name="config" type="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="register" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="context" type="android.content.Context">
+        </parameter>
+        <parameter name="callback" type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="sendMetrics" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="metricsMessage" type="org.jboss.aerogear.android.unifiedpush.metrics.UnifiedPushMetricsMessage">
+        </parameter>
+        <parameter name="callback" type="org.jboss.aerogear.android.core.Callback&lt;org.jboss.aerogear.android.unifiedpush.metrics.UnifiedPushMetricsMessage&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPasswordAuthentication" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="username" type="java.lang.String">
+        </parameter>
+        <parameter name="password" type="java.lang.String">
+        </parameter>
+        <parameter name="provider" type="org.jboss.aerogear.android.pipe.http.HttpProvider">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="unregister" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="context" type="android.content.Context">
+        </parameter>
+        <parameter name="callback" type="org.jboss.aerogear.android.core.Callback&lt;java.lang.Void&gt;">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AeroGearFCMPushRegistrar.1" static="false" visibility="">
+      <implements name="org.jboss.aerogear.android.core.Provider" name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;org.jboss.aerogear.android.pipe.http.HttpProvider&gt;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="org.jboss.aerogear.android.pipe.http.HttpProvider" static="false" synchronized="false" visibility="public">
+        <parameter name="in" type="java.lang.Object...">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AeroGearFCMPushRegistrar.2" static="false" visibility="">
+      <implements name="org.jboss.aerogear.android.core.Provider" name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;com.google.firebase.iid.FirebaseInstanceId&gt;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="com.google.firebase.iid.FirebaseInstanceId" static="false" synchronized="false" visibility="public">
+        <parameter name="context" type="java.lang.Object...">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AeroGearFCMPushRegistrar.3" static="false" visibility="">
+      <implements name="org.jboss.aerogear.android.core.Provider" name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;com.google.firebase.messaging.FirebaseMessaging&gt;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="com.google.firebase.messaging.FirebaseMessaging" static="false" synchronized="false" visibility="public">
+        <parameter name="context" type="java.lang.Object...">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.os.AsyncTask" extends-generic-aware="android.os.AsyncTask&lt;java.lang.Void, java.lang.Void, java.lang.Exception&gt;" final="false" name="AeroGearFCMPushRegistrar.4" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="doInBackground" native="false" return="java.lang.Exception" static="false" synchronized="false" visibility="protected">
+        <parameter name="params" type="java.lang.Void...">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPostExecute" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="result" type="java.lang.Exception">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.os.AsyncTask" extends-generic-aware="android.os.AsyncTask&lt;java.lang.Void, java.lang.Void, java.lang.Exception&gt;" final="false" name="AeroGearFCMPushRegistrar.5" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="doInBackground" native="false" return="java.lang.Exception" static="false" synchronized="false" visibility="protected">
+        <parameter name="params" type="java.lang.Void...">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPostExecute" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="result" type="java.lang.Exception">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.os.AsyncTask" extends-generic-aware="android.os.AsyncTask&lt;java.lang.Void, java.lang.Void, java.lang.Exception&gt;" final="false" name="AeroGearFCMPushRegistrar.6" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="doInBackground" native="false" return="java.lang.Exception" static="false" synchronized="false" visibility="protected">
+        <parameter name="params" type="java.lang.Void...">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPostExecute" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="result" type="java.lang.Exception">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FCMSharedPreferenceProvider" static="false" visibility="public">
+      <implements name="org.jboss.aerogear.android.core.Provider" name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;android.content.SharedPreferences&gt;">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="FCMSharedPreferenceProvider" static="false" type="org.jboss.aerogear.android.unifiedpush.fcm.FCMSharedPreferenceProvider" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="android.content.SharedPreferences" static="false" synchronized="false" visibility="public">
+        <parameter name="in" type="java.lang.Object...">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="UnifiedPushConfig" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="UnifiedPushConfig" static="false" type="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addCategories" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="categories" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addCategory" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="category" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="checkRequiredFields" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAlias" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCategories" native="false" return="java.util.List&lt;java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceToken" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceType" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOperatingSystem" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOsVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPushServerURI" native="false" return="java.net.URI" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSecret" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSenderId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getVariantID" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAlias" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="alias" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCategories" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="categories" type="java.lang.String...">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCategories" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="categories" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDeviceType" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="deviceType" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOperatingSystem" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="operatingSystem" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPushServerURI" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="pushServerURI" type="java.net.URI">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSecret" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="secret" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSenderId" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="senderId" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setVariantID" native="false" return="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushConfig" static="false" synchronized="false" visibility="public">
+        <parameter name="variantID" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.google.firebase.iid.FirebaseInstanceIdService" extends-generic-aware="com.google.firebase.iid.FirebaseInstanceIdService" final="false" name="UnifiedPushInstanceIDListenerService" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="UnifiedPushInstanceIDListenerService" static="false" type="org.jboss.aerogear.android.unifiedpush.fcm.UnifiedPushInstanceIDListenerService" visibility="public">
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="UnifiedPushInstanceIDListenerService.1" static="false" visibility="">
+      <implements name="org.jboss.aerogear.android.core.Provider" name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;com.google.firebase.iid.FirebaseInstanceId&gt;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="com.google.firebase.iid.FirebaseInstanceId" static="false" synchronized="false" visibility="public">
+        <parameter name="context" type="java.lang.Object...">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="UnifiedPushInstanceIDListenerService.2" static="false" visibility="">
+      <implements name="org.jboss.aerogear.android.core.Provider" name-generic-aware="org.jboss.aerogear.android.core.Provider&lt;org.jboss.aerogear.android.pipe.http.HttpProvider&gt;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="org.jboss.aerogear.android.pipe.http.HttpProvider" static="false" synchronized="false" visibility="public">
+        <parameter name="in" type="java.lang.Object...">
+        </parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="UnifiedPushMessage" static="false" visibility="public">
+      <field deprecated="not deprecated" final="true" name="ALERT_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;alert&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="PUSH_MESSAGE_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;aerogear-push-id&quot;" visibility="public" volatile="false">
+      </field>
+    </interface>
+  </package>
+  <package name="org.jboss.aerogear.android.unifiedpush.metrics">
+    <interface abstract="true" deprecated="not deprecated" final="false" name="MetricsMessage" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="getMessageId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="MetricsSender" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="org.jboss.aerogear.android.unifiedpush.metrics.MetricsMessage">
+            </genericConstraint>
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="sendMetrics" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T">
+        </parameter>
+        <parameter name="p1" type="org.jboss.aerogear.android.core.Callback&lt;T&gt;">
+        </parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="UnifiedPushMetricsMessage" static="false" visibility="public">
+      <implements name="org.jboss.aerogear.android.unifiedpush.metrics.MetricsMessage" name-generic-aware="org.jboss.aerogear.android.unifiedpush.metrics.MetricsMessage">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="UnifiedPushMetricsMessage" static="false" type="org.jboss.aerogear.android.unifiedpush.metrics.UnifiedPushMetricsMessage" visibility="public">
+        <parameter name="bundle" type="android.os.Bundle">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="UnifiedPushMetricsMessage" static="false" type="org.jboss.aerogear.android.unifiedpush.metrics.UnifiedPushMetricsMessage" visibility="public">
+        <parameter name="messageId" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMessageId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+  </package>
+</api>

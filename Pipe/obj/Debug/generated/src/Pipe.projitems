@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Callback.AbstractActivityCallback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Callback.AbstractCallback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Callback.AbstractFragmentCallback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Callback.AbstractSupportFragmentCallback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Http.HeaderAndBody.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Http.HttpException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Http.HttpProviderFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Http.HttpRestProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Http.IHttpProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.IRequestBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.IResponseParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Loader.AbstractPipeLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Loader.IdReadLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Loader.LoaderAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Loader.ReadLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Loader.RemoveLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Loader.SaveLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.MarshallingConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Module.AuthorizationFields.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Module.IPipeModule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Module.ModuleFields.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Paging.DefaultParameterProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Paging.IMetadataLocation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Paging.PageConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Paging.URIBodyPageParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Paging.URIPageHeaderParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Paging.WebLink.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Paging.WrappingPagedList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.PipeConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.PipeManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Rest.Gson.GsonRequestBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Rest.Gson.GsonResponseParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Rest.Multipart.MultipartRequestBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Rest.Multipart.TypeAndStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Rest.RestAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Rest.RestfulPipeConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Rest.RestfulPipeConfigurationProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Rest.RestRunner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Util.ClassUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Util.ParseException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Util.UrlUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Pipe.Util.WebLinkParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>

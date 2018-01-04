@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.ICallback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.IConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.IConfigurationProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.IProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.IRecordId.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.ReadFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.RecordIdAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.Reflection.FieldNotFoundException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.Reflection.Property.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.Reflection.PropertyNotFoundException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.Reflection.RecordIdNotFoundException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Core.Reflection.Scan.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.AeroGearFCMMessageReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.AeroGearFCMPushConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.AeroGearFCMPushConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.AeroGearFCMPushConfigurationProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.AeroGearFCMPushJsonConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.AeroGearFCMPushJsonConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.AeroGearFCMPushJsonConfigurationProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.AeroGearFCMPushRegistrar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.FCMSharedPreferenceProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.IUnifiedPushMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.UnifiedPushConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Fcm.UnifiedPushInstanceIDListenerService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.IMessageHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.IOnPushRegistrarCreatedListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.IPushRegistrar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Metrics.IMetricsMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Metrics.IMetricsSender.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.Metrics.UnifiedPushMetricsMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.PushConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Org.Jboss.Aerogear.Android.Unifiedpush.RegistrarManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>
